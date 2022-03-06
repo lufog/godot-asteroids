@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://8nm1xu12uwwu"]
+
+[ext_resource type="Texture2D" uid="uid://fpaynveq18rv" path="res://icon.png" id="1_d6ef3"]
+[ext_resource type="Script" path="res://asteroid/asteroid.gd" id="1_i1h4o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r5bke"]
+radius = 30.0
+
+[node name="Asteroid" type="RigidDynamicBody2D"]
+script = ExtResource( "1_i1h4o" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource( "1_d6ef3" )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( "CircleShape2D_r5bke" )
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
