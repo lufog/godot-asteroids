@@ -1,17 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://btyvbglvf3mg7"]
+[gd_scene load_steps=3 format=3 uid="uid://btyvbglvf3mg7"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_aj8ry"]
-[ext_resource type="Texture2D" uid="uid://fpaynveq18rv" path="res://icon.png" id="1_bbwnf"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_fdcid"]
-radius = 30.0
+[ext_resource type="Texture2D" uid="uid://w47rqm6kpq2e" path="res://assets/sprites/spaceships/spaceship_1_red.png" id="2_dl54q"]
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource( "1_aj8ry" )
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( "1_bbwnf" )
+texture = ExtResource( "2_dl54q" )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( "CircleShape2D_fdcid" )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(8, -37, 12, -11, 37, 2, 45, -6, 49, -6, 47, 25, 38, 23, 13, 28, 7, 38, -7, 38, -13, 28, -38, 23, -47, 25, -49, -6, -45, -6, -37, 2, -12, -11, -8, -37)

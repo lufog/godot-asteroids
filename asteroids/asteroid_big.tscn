@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://8nm1xu12uwwu"]
+
+[ext_resource type="Texture2D" uid="uid://ci8ovaf7gpptj" path="res://assets/sprites/asteroids/asteroid_brown_big_1.png" id="2_grb5s"]
+
+[node name="AsteroidBig" type="RigidDynamicBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource( "2_grb5s" )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(23, -41, 50, -1, 34, 32, 10, 29, -22, 41, -50, 10, -33, -41)

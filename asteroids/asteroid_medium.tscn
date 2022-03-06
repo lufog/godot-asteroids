@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4rixpr1igd5r"]
+
+[ext_resource type="Texture2D" uid="uid://j7qnw7eu2egs" path="res://assets/sprites/asteroids/asteroid_brown_med_1.png" id="1_u2wwj"]
+
+[node name="AsteroidMedium" type="RigidDynamicBody2D"]
+mass = 0.5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource( "1_u2wwj" )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-9, -20, 17, -19, 21, 7, 0, 21, -14, 15, -21, -4)

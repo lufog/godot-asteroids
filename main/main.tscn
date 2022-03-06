@@ -1,12 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://clpumpee14l5a"]
+[gd_scene load_steps=6 format=3 uid="uid://dng41f5cc7k3j"]
 
+[ext_resource type="Texture2D" uid="uid://cgakwri5rgsj8" path="res://assets/sprites/backgrounds/blue.png" id="1_3syua"]
 [ext_resource type="PackedScene" uid="uid://btyvbglvf3mg7" path="res://player/player.tscn" id="1_8wv2u"]
-[ext_resource type="PackedScene" uid="uid://8nm1xu12uwwu" path="res://asteroid/asteroid.tscn" id="2_2kkd2"]
+[ext_resource type="PackedScene" uid="uid://8nm1xu12uwwu" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
+[ext_resource type="PackedScene" uid="uid://c4rixpr1igd5r" path="res://asteroids/asteroid_medium.tscn" id="3_nlgry"]
+[ext_resource type="PackedScene" uid="uid://dixdriu2fjxux" path="res://asteroids/asteroid_small.tscn" id="4_6wwda"]
 
 [node name="Main" type="Node"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource( "1_3syua" )
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 600)
 
 [node name="Player" parent="." instance=ExtResource( "1_8wv2u" )]
 position = Vector2(504, 278)
 
-[node name="Asteroid" parent="." instance=ExtResource( "2_2kkd2" )]
-position = Vector2(502, 26)
+[node name="AsteroidBig" parent="." instance=ExtResource( "2_2kkd2" )]
+position = Vector2(169, 162)
+
+[node name="AsteroidMedium" parent="." instance=ExtResource( "3_nlgry" )]
+position = Vector2(399, 91)
+
+[node name="AsteroidSmall" parent="." instance=ExtResource( "4_6wwda" )]
+position = Vector2(583, 133)
+gravity_scale = 0.0
