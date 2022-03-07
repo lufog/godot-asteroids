@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var move_decel: float = 100
 
 @export var turn_speed: float = 3
-@export var turn_accel: float = 6
+@export var turn_accel: float = 4
 @export var turn_decel: float = 2
 
 var angular_velocity: float = 0
