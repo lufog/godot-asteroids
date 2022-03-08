@@ -10,11 +10,15 @@ extends CharacterBody2D
 
 var angular_velocity: float = 0
 
+@onready var thruster := $Thruster as Thruster
+
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_forward"):
+		thruster.active = true
 		velocity = velocity.move_toward(-transform.y * move_speed, move_accel * delta)
 	else:
+		thruster.active = false
 		velocity = velocity.move_toward(Vector2.ZERO, move_decel * delta)
 	
 	var turn_direction := Input.get_axis("turn_left", "turn_right")

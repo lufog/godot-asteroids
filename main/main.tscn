@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dng41f5cc7k3j"]
+[gd_scene load_steps=6 format=3 uid="uid://c020wyfyvdi51"]
 
-[ext_resource type="Texture2D" uid="uid://cgakwri5rgsj8" path="res://assets/sprites/backgrounds/blue.png" id="1_3syua"]
-[ext_resource type="PackedScene" uid="uid://btyvbglvf3mg7" path="res://player/player.tscn" id="1_8wv2u"]
-[ext_resource type="PackedScene" uid="uid://8nm1xu12uwwu" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
-[ext_resource type="PackedScene" uid="uid://c4rixpr1igd5r" path="res://asteroids/asteroid_medium.tscn" id="3_nlgry"]
-[ext_resource type="PackedScene" uid="uid://dixdriu2fjxux" path="res://asteroids/asteroid_small.tscn" id="4_6wwda"]
+[ext_resource type="Texture2D" uid="uid://cgakwri5rgsj8" path="res://assets/textures/backgrounds/blue.png" id="1_3syua"]
+[ext_resource type="PackedScene" uid="uid://dr4kl7ey6n3mm" path="res://player/player.tscn" id="1_8wv2u"]
+[ext_resource type="PackedScene" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
+[ext_resource type="PackedScene" path="res://asteroids/asteroid_medium.tscn" id="3_nlgry"]
+[ext_resource type="PackedScene" uid="uid://c0mn7mn20wu7n" path="res://asteroids/asteroid_small.tscn" id="4_6wwda"]
 
 [node name="Main" type="Node"]
 
