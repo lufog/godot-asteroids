@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c020wyfyvdi51"]
 
 [ext_resource type="Texture2D" uid="uid://cgakwri5rgsj8" path="res://assets/textures/backgrounds/blue.png" id="1_3syua"]
-[ext_resource type="PackedScene" uid="uid://dr4kl7ey6n3mm" path="res://player/player.tscn" id="1_8wv2u"]
-[ext_resource type="PackedScene" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
-[ext_resource type="PackedScene" path="res://asteroids/asteroid_medium.tscn" id="3_nlgry"]
+[ext_resource type="PackedScene" uid="uid://djsq3fpd6ijls" path="res://player/player.tscn" id="1_8wv2u"]
+[ext_resource type="PackedScene" uid="uid://befe7o1wa315u" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
+[ext_resource type="PackedScene" uid="uid://vjnlaffewlk" path="res://asteroids/asteroid_medium.tscn" id="3_nlgry"]
 [ext_resource type="PackedScene" uid="uid://c0mn7mn20wu7n" path="res://asteroids/asteroid_small.tscn" id="4_6wwda"]
 
 [node name="Main" type="Node"]
@@ -14,6 +14,9 @@ texture = ExtResource( "1_3syua" )
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 600)
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Player" parent="." instance=ExtResource( "1_8wv2u" )]
 position = Vector2(504, 278)
@@ -22,8 +25,8 @@ position = Vector2(504, 278)
 position = Vector2(169, 162)
 
 [node name="AsteroidMedium" parent="." instance=ExtResource( "3_nlgry" )]
-position = Vector2(399, 91)
+position = Vector2(369, 150)
 
 [node name="AsteroidSmall" parent="." instance=ExtResource( "4_6wwda" )]
-position = Vector2(583, 133)
+position = Vector2(601, 159)
 gravity_scale = 0.0

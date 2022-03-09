@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://vjnlaffewlk"]
 
-[ext_resource type="Texture2D" path="res://assets/textures/asteroids/asteroid_brown_med_1.png" id="1_u2wwj"]
+[ext_resource type="Texture2D" uid="uid://j7qnw7eu2egs" path="res://assets/textures/asteroids/asteroid_brown_med_1.png" id="1_u2wwj"]
+[ext_resource type="PackedScene" uid="uid://bqvw33mxoj6qt" path="res://common/screen_wrap.tscn" id="2_p7yyb"]
 
 [node name="AsteroidMedium" type="RigidDynamicBody2D"]
 mass = 0.5
@@ -12,3 +13,5 @@ texture = ExtResource( "1_u2wwj" )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(-5, -10, 9, -9, 11, 4, 0, 11, -7, 8, -11, -2)
+
+[node name="ScreenWrap" parent="." instance=ExtResource( "2_p7yyb" )]
