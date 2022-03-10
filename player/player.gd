@@ -3,15 +3,13 @@ extends CharacterBody2D
 @export var move_speed: float = 300
 @export var move_accel: float = 400
 @export var move_decel: float = 100
-
 @export var turn_speed: float = 3
 @export var turn_accel: float = 4
 @export var turn_decel: float = 2
 
-var angular_velocity: float = 0
-
 @onready var thruster := $Thruster as Thruster
 
+var angular_velocity: float = 0
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_forward"):
