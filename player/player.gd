@@ -1,29 +1,24 @@
-extends CharacterBody2D
+extends RigidDynamicBody2D
 
-@export var move_speed: float = 300
-@export var move_accel: float = 400
-@export var move_decel: float = 100
-@export var turn_speed: float = 3
-@export var turn_accel: float = 4
-@export var turn_decel: float = 2
+@export var thrust_force: float = 300
+@export var turn_force: float = 300
 
+@onready var viewport_rect := get_viewport().get_visible_rect()
 @onready var thruster := $Thruster as Thruster
 
-var angular_velocity: float = 0
-
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("move_forward"):
 		thruster.active = true
-		velocity = velocity.move_toward(-transform.y * move_speed, move_accel * delta)
+		var forward_direction = Vector2.UP.rotated(rotation)
+		apply_force(forward_direction * thrust_force)
 	else:
 		thruster.active = false
-		velocity = velocity.move_toward(Vector2.ZERO, move_decel * delta)
 	
 	var turn_direction := Input.get_axis("turn_left", "turn_right")
 	if turn_direction != 0:
-		angular_velocity = move_toward(angular_velocity, turn_direction * turn_speed, turn_accel * delta)
-	else:
-		angular_velocity = move_toward(angular_velocity, 0, turn_decel * delta)
-	
-	rotation += angular_velocity * delta
-	move_and_slide()
+		apply_torque(turn_direction * turn_force)
+		
+func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	# Screen wrap (editing position will directly break physics)
+	state.transform.origin.x = wrapf(state.transform.origin.x, 0, viewport_rect.size.x)
+	state.transform.origin.y = wrapf(state.transform.origin.y, 0, viewport_rect.size.y)
