@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvnqncy6w3tw6"
-path="res://.godot/imported/asteroid_brown_small_1.png-6d144591b4c4ce4bd3723a408378ffb9.ctex"
+uid="uid://cgexlypqfdf11"
+path="res://.godot/imported/asteroid_grey_lg_4.png-deea7ba76a89a92d0236269d089cbb45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/asteroids/asteroid_brown_small_1.png"
-dest_files=["res://.godot/imported/asteroid_brown_small_1.png-6d144591b4c4ce4bd3723a408378ffb9.ctex"]
+source_file="res://assets/textures/asteroids/asteroid_grey_lg_4.png"
+dest_files=["res://.godot/imported/asteroid_grey_lg_4.png-deea7ba76a89a92d0236269d089cbb45.ctex"]
 
 [params]
 

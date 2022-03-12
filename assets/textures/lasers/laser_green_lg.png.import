@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b603wxqdfnsv7"
-path="res://.godot/imported/asteroid_grey_med_2.png-81e6b9b918c04bbcbe9410b31029be52.ctex"
+uid="uid://c48o22r75hnvh"
+path="res://.godot/imported/laser_green_lg.png-c2a6e91a62f659ce698555a7cd7738b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/asteroids/asteroid_grey_med_2.png"
-dest_files=["res://.godot/imported/asteroid_grey_med_2.png-81e6b9b918c04bbcbe9410b31029be52.ctex"]
+source_file="res://assets/textures/lasers/laser_green_lg.png"
+dest_files=["res://.godot/imported/laser_green_lg.png-c2a6e91a62f659ce698555a7cd7738b6.ctex"]
 
 [params]
 
