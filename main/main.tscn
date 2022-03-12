@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://etel25p7oxrf"]
 
 [ext_resource type="Texture2D" uid="uid://cgakwri5rgsj8" path="res://assets/textures/backgrounds/blue.png" id="1_3syua"]
-[ext_resource type="PackedScene" uid="uid://7qwqyqm5fujq" path="res://player/player.tscn" id="1_8wv2u"]
+[ext_resource type="PackedScene" uid="uid://dpxm52kc6ow54" path="res://player/player.tscn" id="1_8wv2u"]
 [ext_resource type="PackedScene" uid="uid://befe7o1wa315u" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
 
 [node name="Main" type="Node"]

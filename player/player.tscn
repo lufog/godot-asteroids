@@ -1,24 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://7qwqyqm5fujq"]
+[gd_scene load_steps=4 format=3 uid="uid://dpxm52kc6ow54"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_aj8ry"]
 [ext_resource type="Texture2D" uid="uid://w47rqm6kpq2e" path="res://assets/textures/spaceships/spaceship_1_red.png" id="2_dl54q"]
-[ext_resource type="Texture2D" uid="uid://csdey6lgpqiv5" path="res://assets/textures/effects/fire_blue.png" id="3_cemea"]
-[ext_resource type="Texture2D" uid="uid://lpsiex4r5myu" path="res://assets/textures/effects/fire_blue_2.png" id="4_7sfv4"]
-[ext_resource type="Texture2D" uid="uid://dpal4puw8ut7l" path="res://assets/textures/effects/fire_blue_3.png" id="5_imwqk"]
-[ext_resource type="Script" path="res://player/thruster.gd" id="6_rkjfv"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_adevb"]
-animations = [{
-"frames": [ExtResource( "3_cemea" ), ExtResource( "4_7sfv4" ), ExtResource( "5_imwqk" )],
-"loop": false,
-"name": &"thrust",
-"speed": 15.0
-}, {
-"frames": [ExtResource( "5_imwqk" ), ExtResource( "4_7sfv4" ), ExtResource( "3_cemea" )],
-"loop": false,
-"name": &"stop",
-"speed": 15.0
-}]
+[ext_resource type="PackedScene" uid="uid://ck05d5mb5wcub" path="res://common/thruster_flame.tscn" id="4_d7l68"]
 
 [node name="Player" type="RigidDynamicBody2D"]
 linear_damp = 0.5
@@ -33,11 +17,11 @@ texture = ExtResource( "2_dl54q" )
 visible = false
 polygon = PackedVector2Array(4, -19, 6, -6, 19, 1, 22, -3, 25, -3, 23, 12, 20, 11, 6, 14, 3, 19, -3, 19, -6, 14, -20, 11, -23, 12, -25, -3, -22, -3, -19, 1, -6, -6, -4, -19)
 
-[node name="Thruster" type="Node2D" parent="."]
-position = Vector2(0, 27)
-script = ExtResource( "6_rkjfv" )
+[node name="Thrusters" type="Node2D" parent="."]
+position = Vector2(0, 21)
 
-[node name="ThrusterFlame" type="AnimatedSprite2D" parent="Thruster"]
-scale = Vector2(0.5, 0.5)
-frames = SubResource( "SpriteFrames_adevb" )
-animation = &"thrust"
+[node name="ThrusterLeft" parent="Thrusters" instance=ExtResource( "4_d7l68" )]
+position = Vector2(-13, 0)
+
+[node name="ThrusterRight" parent="Thrusters" instance=ExtResource( "4_d7l68" )]
+position = Vector2(13, 0)

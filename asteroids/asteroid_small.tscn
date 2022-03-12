@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0mn7mn20wu7n"]
-
-[ext_resource type="PackedScene" uid="uid://bqvw33mxoj6qt" path="res://common/screen_wrap.tscn" id="1_re0h7"]
+[gd_scene load_steps=2 format=3 uid="uid://c0mn7mn20wu7n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x04oq"]
 load_path = "res://.godot/imported/asteroid_brown_small_1.png-b569c8fc09fe1d7908b9ce619ff8d4ac.ctex"
@@ -15,5 +13,3 @@ texture = SubResource( "CompressedTexture2D_x04oq" )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(-3, -6, 5, -6, 7, 2, 0, 7, -5, 5, -7, -1)
-
-[node name="ScreenWrap" parent="." instance=ExtResource( "1_re0h7" )]

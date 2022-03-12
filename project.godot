@@ -9,10 +9,10 @@
 config_version=5
 
 _global_script_classes=[{
-"base": "Node2D",
+"base": "AnimatedSprite2D",
 "class": &"Thruster",
 "language": &"GDScript",
-"path": "res://player/thruster.gd"
+"path": "res://common/thruster_flame.gd"
 }]
 _global_script_class_icons={
 "Thruster": ""
