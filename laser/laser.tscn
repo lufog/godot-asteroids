@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://c3qjgewjxbqhl"]
 
 [ext_resource type="Script" path="res://laser/laser.gd" id="1_n0kia"]
 [ext_resource type="Texture2D" uid="uid://c48o22r75hnvh" path="res://assets/textures/lasers/laser_green_lg.png" id="2_gbwev"]
@@ -7,6 +7,9 @@
 size = Vector2(4, 14)
 
 [node name="Laser" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
 script = ExtResource( "1_n0kia" )
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,4 +23,5 @@ shape = SubResource( "RectangleShape2D_jwniw" )
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-3, -8, 6, 28)
 
+[connection signal="body_entered" from="." to="." method="_on_laser_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="destroy"]

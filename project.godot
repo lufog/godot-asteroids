@@ -9,6 +9,11 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "RigidDynamicBody2D",
+"class": &"Asteroid",
+"language": &"GDScript",
+"path": "res://asteroids/asteroid.gd"
+}, {
 "base": "Area2D",
 "class": &"Laser",
 "language": &"GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[{
 "path": "res://common/thruster_flame.gd"
 }]
 _global_script_class_icons={
+"Asteroid": "",
 "Laser": "",
 "LaserGun": "",
 "Thruster": ""

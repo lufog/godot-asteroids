@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cslwdop3g1drl"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://asteroids/asteroid_big.gd" id="1_fwmwn"]
+[ext_resource type="Script" path="res://asteroids/asteroid.gd" id="1_fwmwn"]
 [ext_resource type="Texture2D" uid="uid://ci8ovaf7gpptj" path="res://assets/textures/asteroids/asteroid_brown_lg_1.png" id="2_grb5s"]
 
 [node name="AsteroidBig" type="RigidDynamicBody2D"]

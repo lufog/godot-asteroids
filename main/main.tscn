@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ccd2n3rc3nau2" path="res://player/player.tscn" id="1_8wv2u"]
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://assets/textures/backgrounds/black.png" id="1_12os2"]
-[ext_resource type="PackedScene" uid="uid://cslwdop3g1drl" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
+[ext_resource type="PackedScene" path="res://asteroids/asteroid_big.tscn" id="2_2kkd2"]
 
 [node name="Main" type="Node"]
 
@@ -18,9 +18,13 @@ __meta__ = {
 
 [node name="AsteroidBig" parent="." instance=ExtResource( "2_2kkd2" )]
 position = Vector2(364, 161)
+linear_velocity = Vector2(50, 100)
+angular_velocity = 1.0
 
 [node name="AsteroidBig2" parent="." instance=ExtResource( "2_2kkd2" )]
 position = Vector2(759, 433)
+linear_velocity = Vector2(-200, -50)
+angular_velocity = -1.0
 
 [node name="AsteroidBig3" parent="." instance=ExtResource( "2_2kkd2" )]
 position = Vector2(133, 336)

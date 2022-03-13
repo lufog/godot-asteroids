@@ -11,3 +11,7 @@ func _process(delta: float) -> void:
 
 func destroy() -> void:
 	queue_free()
+
+func _on_laser_body_entered(body: Node2D) -> void:
+	if body is Asteroid:
+		body.destroy()
