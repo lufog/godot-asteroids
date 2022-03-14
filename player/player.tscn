@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccd2n3rc3nau2"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_aj8ry"]
 [ext_resource type="Texture2D" uid="uid://w47rqm6kpq2e" path="res://assets/textures/spaceships/spaceship_1_red.png" id="2_dl54q"]
 [ext_resource type="PackedScene" uid="uid://byvlkeb4vwgbu" path="res://laser_gun/laser_gun.tscn" id="2_f8v5q"]
-[ext_resource type="PackedScene" uid="uid://ck05d5mb5wcub" path="res://common/thruster_flame.tscn" id="4_d7l68"]
+[ext_resource type="PackedScene" path="res://thruster/thruster.tscn" id="4_d7l68"]
 
 [node name="Player" type="RigidDynamicBody2D"]
 collision_mask = 2

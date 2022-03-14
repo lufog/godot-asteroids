@@ -27,7 +27,7 @@ _global_script_classes=[{
 "base": "AnimatedSprite2D",
 "class": &"Thruster",
 "language": &"GDScript",
-"path": "res://common/thruster_flame.gd"
+"path": "res://thruster/thruster.gd"
 }]
 _global_script_class_icons={
 "Asteroid": "",

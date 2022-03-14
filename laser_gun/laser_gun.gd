@@ -6,7 +6,10 @@ class_name LaserGun extends Node2D
 var laser_scene := load("res://laser/laser.tscn") as PackedScene
 var can_shoot := true
 
-func shoot():
+func _on_cooldown_timer_timeout() -> void:
+	can_shoot = true
+
+func shoot() -> void:
 	if can_shoot:
 		var laser := laser_scene.instantiate() as Laser
 		laser.global_position = global_position
@@ -15,6 +18,3 @@ func shoot():
 		
 		can_shoot = false
 		cooldown_timer.start()
-
-func _on_cooldown_timer_timeout() -> void:
-	can_shoot = true

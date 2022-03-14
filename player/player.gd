@@ -13,8 +13,8 @@ func _physics_process(_delta: float) -> void:
 		thruster_left.active  = true
 		thruster_right.active = true
 		
-		var local_forward_direction = Vector2.UP.rotated(rotation)
-		apply_force(local_forward_direction * thrust_force)
+		var forward_direction = Vector2.UP.rotated(rotation)
+		apply_force(forward_direction * thrust_force)
 	else:
 		thruster_left.active  = false
 		thruster_right.active = false

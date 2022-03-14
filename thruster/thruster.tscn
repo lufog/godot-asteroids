@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck05d5mb5wcub"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Texture2D" uid="uid://dpal4puw8ut7l" path="res://assets/textures/effects/fire_blue_3.png" id="1_ygmln"]
 [ext_resource type="Texture2D" uid="uid://lpsiex4r5myu" path="res://assets/textures/effects/fire_blue_2.png" id="2_c68vh"]
 [ext_resource type="Texture2D" uid="uid://csdey6lgpqiv5" path="res://assets/textures/effects/fire_blue.png" id="3_3u327"]
-[ext_resource type="Script" path="res://common/thruster_flame.gd" id="4_tjbah"]
+[ext_resource type="Script" path="res://thruster/thruster.gd" id="4_tjbah"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_adevb"]
 animations = [{
