@@ -20,8 +20,8 @@ offset = Vector2(0, 12)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( "RectangleShape2D_jwniw" )
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-rect = Rect2(-3, -8, 6, 28)
+[node name="LifetimeTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_laser_body_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="destroy"]
+[connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]
