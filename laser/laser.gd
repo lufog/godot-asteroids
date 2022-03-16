@@ -16,9 +16,10 @@ func _on_lifetime_timer_timeout() -> void:
 	destroy()
 
 func _on_laser_body_entered(body: Node2D) -> void:
-	if body is Asteroid:
+	var asteroid := body as Asteroid
+	if asteroid:
 		self.destroy()
-		body.destroy()
+		asteroid.destroy()
 
 func destroy() -> void:
 	queue_free()
