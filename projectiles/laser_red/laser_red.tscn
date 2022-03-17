@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5ftaml2hux04"]
+
+[ext_resource type="Script" path="res://projectiles/laser.gd" id="1_x0vjj"]
+[ext_resource type="Texture2D" uid="uid://hol7lqa7sfu7" path="res://projectiles/laser_red/assets/texture.png" id="2_60pvd"]
+[ext_resource type="AudioStream" uid="uid://uk5861ylqrvu" path="res://projectiles/laser_red/assets/sound.ogg" id="3_i4300"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uprp"]
+size = Vector2(4, 14)
+
+[node name="laserRed" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource( "1_x0vjj" )
+speed = 400.0
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource( "2_60pvd" )
+offset = Vector2(0, 12)
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( "3_i4300" )
+autoplay = true
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( "RectangleShape2D_2uprp" )
+
+[node name="LifetimeTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_laser_body_entered"]

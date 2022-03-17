@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cmm4iwq4gfrxu"]
 
 [ext_resource type="Script" path="res://asteroids/asteroid.gd" id="1_fwmwn"]
 [ext_resource type="Texture2D" uid="uid://ci8ovaf7gpptj" path="res://assets/textures/asteroids/asteroid_brown_lg_1.png" id="2_grb5s"]
@@ -7,10 +7,10 @@
 collision_layer = 2
 script = ExtResource( "1_fwmwn" )
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource( "2_grb5s" )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="Collider" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(11, -21, 25, 0, 17, 16, 5, 14, -11, 20, -25, 5, -16, -21)

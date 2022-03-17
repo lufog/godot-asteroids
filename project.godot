@@ -17,17 +17,17 @@ _global_script_classes=[{
 "base": "Area2D",
 "class": &"Laser",
 "language": &"GDScript",
-"path": "res://laser/laser.gd"
+"path": "res://projectiles/laser.gd"
 }, {
 "base": "Node2D",
 "class": &"LaserGun",
 "language": &"GDScript",
-"path": "res://laser_gun/laser_gun.gd"
+"path": "res://player/laser_gun/laser_gun.gd"
 }, {
 "base": "AnimatedSprite2D",
 "class": &"Thruster",
 "language": &"GDScript",
-"path": "res://thruster/thruster.gd"
+"path": "res://player/thruster/thruster.gd"
 }]
 _global_script_class_icons={
 "Asteroid": "",
@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Asteroids"
-run/main_scene="res://main/main.tscn"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
 

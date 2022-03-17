@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" uid="uid://dpal4puw8ut7l" path="res://assets/textures/effects/fire_blue_3.png" id="1_ygmln"]
+[ext_resource type="Texture2D" uid="uid://lpsiex4r5myu" path="res://assets/textures/effects/fire_blue_2.png" id="2_c68vh"]
+[ext_resource type="Texture2D" uid="uid://csdey6lgpqiv5" path="res://assets/textures/effects/fire_blue.png" id="3_3u327"]
+[ext_resource type="Script" path="res://player/thruster/thruster.gd" id="4_tjbah"]
+[ext_resource type="AudioStream" path="res://player/thruster/assets/sound.ogg" id="5_lvliy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_adevb"]
+animations = [{
+"frames": [ExtResource( "3_3u327" ), ExtResource( "2_c68vh" ), ExtResource( "1_ygmln" )],
+"loop": false,
+"name": &"thrust",
+"speed": 15.0
+}, {
+"frames": [ExtResource( "1_ygmln" ), ExtResource( "2_c68vh" ), ExtResource( "3_3u327" )],
+"loop": false,
+"name": &"stop",
+"speed": 15.0
+}]
+
+[node name="Thruster" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+frames = SubResource( "SpriteFrames_adevb" )
+animation = &"thrust"
+script = ExtResource( "4_tjbah" )
+
+[node name="ThrusterSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( "5_lvliy" )
+volume_db = -8.0
