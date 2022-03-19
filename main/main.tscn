@@ -3,9 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background_black.png" id="1_wm7ti"]
 [ext_resource type="PackedScene" path="res://player/player.tscn" id="2_ltcjb"]
 [ext_resource type="PackedScene" path="res://asteroids/asteroid_big.tscn" id="3_fxrky"]
-[ext_resource type="PackedScene" uid="uid://xlg0ofr8jy78" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
+[ext_resource type="PackedScene" uid="uid://cu1uxwo0a48fv" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
 
 [node name="Main" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( "4_ldk8l" )]
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_repeat = 2
@@ -64,5 +68,3 @@ position = Vector2(905, 245)
 
 [node name="AsteroidBig13" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
 position = Vector2(896, 523)
-
-[node name="HUD" parent="." instance=ExtResource( "4_ldk8l" )]

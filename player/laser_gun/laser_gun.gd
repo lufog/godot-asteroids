@@ -6,8 +6,12 @@ class_name LaserGun extends Node2D
 var projectile_scene := load("res://projectiles/laser_green/laser_green.tscn") as PackedScene
 var can_shoot := true
 
+# Callbacks -------------------------------------------------------------------
+
 func _on_cooldown_timer_timeout() -> void:
 	can_shoot = true
+	
+# Public methods --------------------------------------------------------------
 
 func shoot() -> void:
 	if can_shoot:
