@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5ftaml2hux04"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://projectiles/laser.gd" id="1_x0vjj"]
-[ext_resource type="Texture2D" uid="uid://hol7lqa7sfu7" path="res://projectiles/laser_red/assets/texture.png" id="2_60pvd"]
-[ext_resource type="AudioStream" uid="uid://uk5861ylqrvu" path="res://projectiles/laser_red/assets/sound.ogg" id="3_i4300"]
+[ext_resource type="Script" path="res://projectiles/projectile.gd" id="1_x0vjj"]
+[ext_resource type="Texture2D" path="res://projectiles/laser_red/assets/textures/red_laser.png" id="2_60pvd"]
+[ext_resource type="AudioStream" path="res://projectiles/laser_red/assets/sounds/red_laser.ogg" id="3_i4300"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2uprp"]
 size = Vector2(4, 14)

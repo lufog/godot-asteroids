@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8jxh6g7dc03p"]
+[gd_scene load_steps=8 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cq8fmwvp087os" path="res://effects/asteroid_explosion/assets/particles_texture.png" id="1_v4q87"]
+[ext_resource type="Texture2D" path="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png" id="1_v4q87"]
 [ext_resource type="Script" path="res://effects/asteroid_explosion/asteroid_explosion.gd" id="2_dffp6"]
-[ext_resource type="AudioStream" uid="uid://bugxby3duewyo" path="res://effects/asteroid_explosion/assets/sound.ogg" id="3_tvv46"]
+[ext_resource type="AudioStream" uid="uid://bugxby3duewyo" path="res://effects/asteroid_explosion/assets/sounds/asteroid_explosion.ogg" id="3_tvv46"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fab6d"]
 particles_animation = true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://ch2o4jv0kwx8f"
+path="res://.godot/imported/alien_ship.ogg-acbe221122fc2c173cf5d613ae351808.oggvorbisstr"
+
+[deps]
+
+source_file="res://alien/assets/sounds/alien_ship.ogg"
+dest_files=["res://.godot/imported/alien_ship.ogg-acbe221122fc2c173cf5d613ae351808.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
