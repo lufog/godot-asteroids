@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://caa44py4w0a8j"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_aj8ry"]
-[ext_resource type="Texture2D" path="res://player/assets/textures/spaceship_red.png" id="2_dl54q"]
+[ext_resource type="Texture2D" uid="uid://w47rqm6kpq2e" path="res://player/assets/textures/spaceship_red.png" id="2_dl54q"]
 [ext_resource type="PackedScene" path="res://player/laser_gun/laser_gun.tscn" id="2_f8v5q"]
 [ext_resource type="PackedScene" path="res://player/thruster/thruster.tscn" id="4_tj87x"]
 
@@ -18,7 +18,7 @@ position = Vector2(0, -36)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource( "2_dl54q" )
 
-[node name="Collider" type="CollisionPolygon2D" parent="."]
+[node name="CollisionShape" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(4, -19, 6, -6, 19, 1, 22, -3, 25, -3, 23, 12, 20, 11, 6, 14, 3, 19, -3, 19, -6, 14, -20, 11, -23, 12, -25, -3, -22, -3, -19, 1, -6, -6, -4, -19)
 

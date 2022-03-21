@@ -1,17 +1,15 @@
 class_name LaserGun extends Node2D
 
-@onready var root_node := get_tree().root as Node
-@onready var cooldown_timer := $CooldownTimer as Timer
-
 var projectile_scene := load("res://projectiles/laser_green/laser_green.tscn") as PackedScene
 var can_shoot := true
 
-# Callbacks -------------------------------------------------------------------
+@onready var root_node := $/root as Node
+@onready var cooldown_timer := $CooldownTimer as Timer
+
 
 func _on_cooldown_timer_timeout() -> void:
 	can_shoot = true
-	
-# Public methods --------------------------------------------------------------
+
 
 func shoot() -> void:
 	if can_shoot:

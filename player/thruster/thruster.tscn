@@ -1,21 +1,21 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://dd31mn8mb23q4"]
 
+[ext_resource type="Texture2D" uid="uid://csdey6lgpqiv5" path="res://player/thruster/assets/textures/thruster_flame_1.png" id="1_pyifq"]
 [ext_resource type="Texture2D" uid="uid://dpal4puw8ut7l" path="res://player/thruster/assets/textures/thruster_flame_3.png" id="1_ygmln"]
 [ext_resource type="Texture2D" uid="uid://lpsiex4r5myu" path="res://player/thruster/assets/textures/thruster_flame_2.png" id="2_c68vh"]
-[ext_resource type="Texture2D" uid="uid://csdey6lgpqiv5" path="res://player/thruster/assets/textures/thruster_flame.png" id="3_3u327"]
 [ext_resource type="Script" path="res://player/thruster/thruster.gd" id="4_tjbah"]
-[ext_resource type="AudioStream" path="res://player/thruster/assets/sounds/thruster.ogg" id="5_lvliy"]
+[ext_resource type="AudioStream" uid="uid://csom6yoyig7n6" path="res://player/thruster/assets/sfx/thruster.ogg" id="5_lvliy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_adevb"]
 animations = [{
-"frames": [ExtResource( "1_ygmln" ), ExtResource( "2_c68vh" ), ExtResource( "3_3u327" )],
-"loop": false,
-"name": &"stop",
-"speed": 15.0
-}, {
-"frames": [ExtResource( "3_3u327" ), ExtResource( "2_c68vh" ), ExtResource( "1_ygmln" )],
+"frames": [ExtResource( "1_pyifq" ), ExtResource( "2_c68vh" ), ExtResource( "1_ygmln" )],
 "loop": false,
 "name": &"thrust",
+"speed": 15.0
+}, {
+"frames": [ExtResource( "1_ygmln" ), ExtResource( "2_c68vh" ), ExtResource( "1_pyifq" )],
+"loop": false,
+"name": &"stop",
 "speed": 15.0
 }]
 
@@ -25,6 +25,6 @@ frames = SubResource( "SpriteFrames_adevb" )
 animation = &"thrust"
 script = ExtResource( "4_tjbah" )
 
-[node name="ThrusterSound" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( "5_lvliy" )
 volume_db = -20.0

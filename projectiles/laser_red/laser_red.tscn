@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://cnuphdu33yw6e"]
 
 [ext_resource type="Script" path="res://projectiles/projectile.gd" id="1_x0vjj"]
-[ext_resource type="Texture2D" path="res://projectiles/laser_red/assets/textures/red_laser.png" id="2_60pvd"]
-[ext_resource type="AudioStream" path="res://projectiles/laser_red/assets/sounds/red_laser.ogg" id="3_i4300"]
+[ext_resource type="Texture2D" uid="uid://hol7lqa7sfu7" path="res://projectiles/laser_red/assets/textures/red_laser.png" id="2_60pvd"]
+[ext_resource type="AudioStream" uid="uid://uk5861ylqrvu" path="res://projectiles/laser_red/assets/sfx/red_laser.ogg" id="3_i4300"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2uprp"]
 size = Vector2(4, 14)
@@ -19,11 +19,11 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource( "2_60pvd" )
 offset = Vector2(0, 12)
 
-[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( "3_i4300" )
 autoplay = true
 
-[node name="Collider" type="CollisionShape2D" parent="."]
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( "RectangleShape2D_2uprp" )
 

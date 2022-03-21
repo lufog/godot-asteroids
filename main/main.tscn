@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdkec64bot4l6"]
+[gd_scene load_steps=6 format=3 uid="uid://bv3r1nik67kha"]
 
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background_black.png" id="1_wm7ti"]
-[ext_resource type="PackedScene" path="res://player/player.tscn" id="2_ltcjb"]
-[ext_resource type="PackedScene" path="res://asteroids/asteroid_big.tscn" id="3_fxrky"]
+[ext_resource type="PackedScene" uid="uid://caa44py4w0a8j" path="res://player/player.tscn" id="2_ltcjb"]
+[ext_resource type="PackedScene" uid="uid://7tgdp7nm7uii" path="res://asteroids/asteroid_big.tscn" id="3_fxrky"]
 [ext_resource type="PackedScene" uid="uid://cu1uxwo0a48fv" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
+[ext_resource type="PackedScene" uid="uid://dmigg8vyygel8" path="res://ufo/ufo.tscn" id="5_qxc4i"]
 
 [node name="Main" type="Node"]
 
@@ -28,43 +29,12 @@ position = Vector2(508, 338)
 
 [node name="AsteroidBig" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
 position = Vector2(364, 161)
-linear_velocity = Vector2(50, 100)
-angular_velocity = 1.0
 
 [node name="AsteroidBig2" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
 position = Vector2(759, 433)
-linear_velocity = Vector2(-200, -50)
-angular_velocity = -1.0
 
 [node name="AsteroidBig3" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
 position = Vector2(133, 336)
 
-[node name="AsteroidBig4" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(712, 161)
-
-[node name="AsteroidBig5" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(263, 493)
-
-[node name="AsteroidBig6" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(556, 64)
-
-[node name="AsteroidBig7" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(676, 545)
-
-[node name="AsteroidBig8" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(88, 547)
-
-[node name="AsteroidBig9" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(124, 143)
-
-[node name="AsteroidBig10" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(236, 67)
-
-[node name="AsteroidBig11" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(856, 61)
-
-[node name="AsteroidBig12" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(905, 245)
-
-[node name="AsteroidBig13" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(896, 523)
+[node name="UFO" parent="." instance=ExtResource( "5_qxc4i" )]
+position = Vector2(315, 310)

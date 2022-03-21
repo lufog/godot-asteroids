@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3]
 
-[ext_resource type="Texture2D" path="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png" id="1_v4q87"]
-[ext_resource type="Script" path="res://effects/asteroid_explosion/asteroid_explosion.gd" id="2_dffp6"]
-[ext_resource type="AudioStream" uid="uid://bugxby3duewyo" path="res://effects/asteroid_explosion/assets/sounds/asteroid_explosion.ogg" id="3_tvv46"]
+[ext_resource type="Script" path="res://effects/asteroid_explosion/asteroid_explosion.gd" id="1_q366j"]
+[ext_resource type="Texture2D" path="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png" id="1_xpd1u"]
+[ext_resource type="AudioStream" uid="uid://bugxby3duewyo" path="res://effects/asteroid_explosion/assets/sfx/asteroid_explosion.ogg" id="3_xpk54"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fab6d"]
 particles_animation = true
@@ -32,15 +32,18 @@ orbit_velocity_max = 0.1
 scale_curve = SubResource( "CurveTexture_q8rl8" )
 anim_offset_max = 1.0
 
-[node name="AsteroidExplosion" type="GPUParticles2D"]
+[node name="AsteroidExplosion" type="Node2D"]
+script = ExtResource( "1_q366j" )
+
+[node name="Particles" type="GPUParticles2D" parent="."]
 material = SubResource( "CanvasItemMaterial_fab6d" )
+emitting = false
 amount = 10
 one_shot = true
 explosiveness = 0.5
 process_material = SubResource( "ParticlesMaterial_r33lf" )
-texture = ExtResource( "1_v4q87" )
-script = ExtResource( "2_dffp6" )
+texture = ExtResource( "1_xpd1u" )
 
-[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( "3_tvv46" )
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( "3_xpk54" )
 autoplay = true

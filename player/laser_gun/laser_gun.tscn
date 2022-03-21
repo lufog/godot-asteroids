@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://cm6p260souugx"]
 
 [ext_resource type="Script" path="res://player/laser_gun/laser_gun.gd" id="1_fqf3t"]
 

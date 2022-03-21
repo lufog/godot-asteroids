@@ -4,6 +4,8 @@ extends RigidDynamicBody2D
 @export var thrust_force: float = 400
 @export var turn_force: float = 600
 
+var explosion_effect_scene := preload("res://effects/ship_explosion/ship_explosion.tscn")
+
 var _lives: int = 0
 var lives:
 	get:
@@ -21,16 +23,16 @@ var lives:
 @onready var thruster_left  := $Thrusters/Left  as Thruster
 @onready var thruster_right := $Thrusters/Right as Thruster
 
-# Callbacks -------------------------------------------------------------------
 
 func _ready() -> void:
 	lives = max_lives
 
-# TODO: Remove after implementing player gamage
+# TODO: Remove after implementing player damage
 func _input(event: InputEvent) -> void:
 	var just_pressed = event.is_pressed() and not event.is_echo()
 	if Input.is_key_pressed(KEY_Q) and just_pressed:
 		lives -= 1
+
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("move_forward"):
@@ -53,12 +55,15 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("shoot"):
 		laser_gun.shoot()
 
+
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	# Screen wrap
 	state.transform.origin.x = wrapf(state.transform.origin.x, 0.0, viewport_rect.size.x)
 	state.transform.origin.y = wrapf(state.transform.origin.y, 0.0, viewport_rect.size.y)
 
-# Public methods --------------------------------------------------------------
 
 func destroy() -> void:
+	var explosion_effect := explosion_effect_scene.instantiate() as Node2D
+	explosion_effect.position = position
+	get_parent().add_child(explosion_effect)
 	queue_free() 

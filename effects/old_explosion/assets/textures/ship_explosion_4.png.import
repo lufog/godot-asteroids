@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csdey6lgpqiv5"
-path="res://.godot/imported/thruster_flame.png-08835bc1d7c818f2fd95f633d5a16bf1.ctex"
+uid="uid://btdxcc30yocgn"
+path="res://.godot/imported/ship_explosion_4.png-485eb5aceec13e8400001a5f0350d6e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/thruster/assets/textures/thruster_flame.png"
-dest_files=["res://.godot/imported/thruster_flame.png-08835bc1d7c818f2fd95f633d5a16bf1.ctex"]
+source_file="res://effects/old_explosion/assets/textures/ship_explosion_4.png"
+dest_files=["res://.godot/imported/ship_explosion_4.png-485eb5aceec13e8400001a5f0350d6e6.ctex"]
 
 [params]
 
@@ -21,7 +21,6 @@ compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
-compress/streamed=false
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0

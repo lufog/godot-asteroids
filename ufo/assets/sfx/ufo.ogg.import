@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://corsvlygkomb6"
+path="res://.godot/imported/ufo.ogg-5f1e090b16038d37e8649272750bbc9b.oggvorbisstr"
+
+[deps]
+
+source_file="res://ufo/assets/sfx/ufo.ogg"
+dest_files=["res://.godot/imported/ufo.ogg-5f1e090b16038d37e8649272750bbc9b.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
