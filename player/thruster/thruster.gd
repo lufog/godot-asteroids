@@ -2,7 +2,7 @@ class_name Thruster extends AnimatedSprite2D
 
 var active := false
 
-@onready var sfx := $ThrusterSound as AudioStreamPlayer2D
+@onready var sfx := $SFX as AudioStreamPlayer2D
 
 
 func _ready() -> void:
