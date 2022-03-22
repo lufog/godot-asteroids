@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv3r1nik67kha"]
+[gd_scene load_steps=6 format=3 uid="uid://b86wj8bvmurcx"]
 
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background_black.png" id="1_wm7ti"]
 [ext_resource type="PackedScene" uid="uid://pgx5c4t2p3pg" path="res://player/player.tscn" id="2_ltcjb"]
-[ext_resource type="PackedScene" uid="uid://7tgdp7nm7uii" path="res://asteroids/asteroid_big.tscn" id="3_fxrky"]
+[ext_resource type="PackedScene" uid="uid://vj65um5o2ibq" path="res://asteroids/asteroid_large.tscn" id="3_fxrky"]
 [ext_resource type="PackedScene" uid="uid://cu1uxwo0a48fv" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
 [ext_resource type="PackedScene" uid="uid://dmigg8vyygel8" path="res://ufo/ufo.tscn" id="5_qxc4i"]
 

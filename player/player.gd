@@ -18,7 +18,6 @@ var lives:
 			GameEvents.player_died.emit()
 			destroy()
 
-@onready var viewport_rect := get_viewport().get_visible_rect()
 @onready var laser_gun := $LaserGun as LaserGun
 @onready var thruster_left  := $Thrusters/Left  as Thruster
 @onready var thruster_right := $Thrusters/Right as Thruster
@@ -57,9 +56,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	# Screen wrap
-	state.transform.origin.x = wrapf(state.transform.origin.x, 0.0, viewport_rect.size.x)
-	state.transform.origin.y = wrapf(state.transform.origin.y, 0.0, viewport_rect.size.y)
+	Helpers.physics_body_screen_wrap(state)
 
 
 func destroy() -> void:
