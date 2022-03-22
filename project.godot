@@ -17,7 +17,7 @@ _global_script_classes=[{
 "base": "Node2D",
 "class": &"LaserGun",
 "language": &"GDScript",
-"path": "res://player/laser_gun/laser_gun.gd"
+"path": "res://laser_gun/laser_gun.gd"
 }, {
 "base": "Area2D",
 "class": &"Projectile",

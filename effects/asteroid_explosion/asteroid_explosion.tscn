@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://dqpukr6anax4o"]
 
 [ext_resource type="Script" path="res://effects/asteroid_explosion/asteroid_explosion.gd" id="1_q366j"]
-[ext_resource type="Texture2D" path="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png" id="1_xpd1u"]
-[ext_resource type="AudioStream" uid="uid://bugxby3duewyo" path="res://effects/asteroid_explosion/assets/sfx/asteroid_explosion.ogg" id="3_xpk54"]
+[ext_resource type="Texture2D" uid="uid://b7bunilprqsbq" path="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png" id="1_xpd1u"]
+[ext_resource type="AudioStream" uid="uid://cea3u1drudjvv" path="res://effects/asteroid_explosion/assets/sfx/asteroid_explosion.ogg" id="3_xpk54"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fab6d"]
 particles_animation = true
@@ -37,7 +37,6 @@ script = ExtResource( "1_q366j" )
 
 [node name="Particles" type="GPUParticles2D" parent="."]
 material = SubResource( "CanvasItemMaterial_fab6d" )
-emitting = false
 amount = 10
 one_shot = true
 explosiveness = 0.5

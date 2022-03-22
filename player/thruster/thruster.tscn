@@ -8,14 +8,14 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_adevb"]
 animations = [{
-"frames": [ExtResource( "1_pyifq" ), ExtResource( "2_c68vh" ), ExtResource( "1_ygmln" )],
-"loop": false,
-"name": &"thrust",
-"speed": 15.0
-}, {
 "frames": [ExtResource( "1_ygmln" ), ExtResource( "2_c68vh" ), ExtResource( "1_pyifq" )],
 "loop": false,
 "name": &"stop",
+"speed": 15.0
+}, {
+"frames": [ExtResource( "1_pyifq" ), ExtResource( "2_c68vh" ), ExtResource( "1_ygmln" )],
+"loop": false,
+"name": &"thrust",
 "speed": 15.0
 }]
 

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmigg8vyygel8"]
+[gd_scene load_steps=7 format=3 uid="uid://dmigg8vyygel8"]
 
 [ext_resource type="Script" path="res://ufo/ufo.gd" id="1_nkgyr"]
+[ext_resource type="PackedScene" uid="uid://bb7ndqq5jk8bh" path="res://laser_gun/laser_gun.tscn" id="2_1xvnt"]
 [ext_resource type="Texture2D" uid="uid://ds2cbxahp03xe" path="res://ufo/assets/textures/ufo_green.png" id="2_65cia"]
+[ext_resource type="PackedScene" uid="uid://cnuphdu33yw6e" path="res://projectiles/laser_red/laser_red.tscn" id="3_dkr34"]
 [ext_resource type="AudioStream" uid="uid://corsvlygkomb6" path="res://ufo/assets/sfx/ufo.ogg" id="3_reo7d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwrn0"]
@@ -11,6 +13,9 @@ radius = 22.0
 collision_layer = 2
 angular_velocity = 4.0
 script = ExtResource( "1_nkgyr" )
+
+[node name="LaserGun" parent="." instance=ExtResource( "2_1xvnt" )]
+projectile_scene = ExtResource( "3_dkr34" )
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -22,4 +27,11 @@ shape = SubResource( "CircleShape2D_gwrn0" )
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( "3_reo7d" )
+volume_db = -10.0
 autoplay = true
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

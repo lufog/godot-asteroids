@@ -1,6 +1,7 @@
 class_name LaserGun extends Node2D
 
-var projectile_scene := load("res://projectiles/laser_green/laser_green.tscn") as PackedScene
+@export var projectile_scene: PackedScene
+
 var can_shoot := true
 
 @onready var root_node := $/root as Node
