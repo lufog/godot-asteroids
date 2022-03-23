@@ -15,6 +15,7 @@ angular_velocity = 4.0
 script = ExtResource( "1_nkgyr" )
 
 [node name="LaserGun" parent="." instance=ExtResource( "2_1xvnt" )]
+position = Vector2(0, -40)
 projectile_scene = ExtResource( "3_dkr34" )
 
 [node name="Sprite" type="Sprite2D" parent="."]

@@ -5,6 +5,8 @@ class_name DebrisSpawner extends Node2D
 @export var offset := 10.0
 @export var force := 50.0
 
+@onready var asteroids_node := $/root/Main/Asteroids as Node
+
 
 func spawn() -> void:
 	for i in directions.size():
@@ -12,4 +14,4 @@ func spawn() -> void:
 		debris.global_position = global_position + (directions[i] * offset)
 		debris.angular_velocity = randf_range(-4, 4)
 		debris.linear_velocity = directions[i] * force
-		get_parent().get_parent().add_child(debris)
+		asteroids_node.add_child.call_deferred(debris)
