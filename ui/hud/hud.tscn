@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cu1uxwo0a48fv"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b5j2l0mnxchxx" path="res://ui/hud/assets/textures/player_life_red.png" id="1_ygxrd"]
+[ext_resource type="Texture2D" path="res://ui/hud/assets/textures/player_life.png" id="1_ygxrd"]
 [ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_yspea"]
 
 [node name="HUD" type="Control"]

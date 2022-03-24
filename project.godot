@@ -17,27 +17,22 @@ _global_script_classes=[{
 "base": "Asteroid",
 "class": &"AsteroidLarge",
 "language": &"GDScript",
-"path": "res://asteroids/asteroid_large.gd"
+"path": "res://asteroids/asteroid_large/asteroid_large.gd"
 }, {
 "base": "Asteroid",
 "class": &"AsteroidMedium",
 "language": &"GDScript",
-"path": "res://asteroids/asteroid_medium.gd"
+"path": "res://asteroids/asteroid_medium/asteroid_medium.gd"
 }, {
 "base": "Asteroid",
 "class": &"AsteroidSmall",
 "language": &"GDScript",
-"path": "res://asteroids/asteroid_small.gd"
+"path": "res://asteroids/asteroid_small/asteroid_small.gd"
 }, {
 "base": "Node2D",
 "class": &"DebrisSpawner",
 "language": &"GDScript",
-"path": "res://asteroids/debris_spawner/debris spawner.gd"
-}, {
-"base": "Node2D",
-"class": &"LaserGun",
-"language": &"GDScript",
-"path": "res://laser_gun/laser_gun.gd"
+"path": "res://spawners/debris_spawner/debris spawner.gd"
 }, {
 "base": "Area2D",
 "class": &"Projectile",
@@ -47,7 +42,12 @@ _global_script_classes=[{
 "base": "AnimatedSprite2D",
 "class": &"Thruster",
 "language": &"GDScript",
-"path": "res://player/thruster/thruster.gd"
+"path": "res://thruster/thruster.gd"
+}, {
+"base": "Node2D",
+"class": &"Weapon",
+"language": &"GDScript",
+"path": "res://weapon/weapon.gd"
 }]
 _global_script_class_icons={
 "Asteroid": "",
@@ -55,9 +55,9 @@ _global_script_class_icons={
 "AsteroidMedium": "",
 "AsteroidSmall": "",
 "DebrisSpawner": "",
-"LaserGun": "",
 "Projectile": "",
-"Thruster": ""
+"Thruster": "",
+"Weapon": ""
 }
 
 [application]

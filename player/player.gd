@@ -1,8 +1,8 @@
 extends RigidDynamicBody2D
 
 @export var max_lives: int = 3
-@export var thrust_force: float = 400
-@export var turn_force: float = 600
+@export var thrust_force: float = 500
+@export var turn_force: float = 1000
 
 var explosion_effect_scene := preload("res://effects/ship_explosion/ship_explosion.tscn")
 
@@ -18,13 +18,14 @@ var lives:
 			GameEvents.player_died.emit()
 			destroy()
 
-@onready var laser_gun := $LaserGun as LaserGun
+@onready var weapon := $Weapon as Weapon
 @onready var thruster_left  := $Thrusters/Left  as Thruster
 @onready var thruster_right := $Thrusters/Right as Thruster
 
 
 func _ready() -> void:
 	lives = max_lives
+
 
 # TODO: Remove after implementing player damage
 func _input(event: InputEvent) -> void:
@@ -52,7 +53,7 @@ func _physics_process(_delta: float) -> void:
 		apply_torque(turn_direction * turn_force)
 	
 	if Input.is_action_pressed("shoot"):
-		laser_gun.shoot()
+		weapon.shoot()
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:

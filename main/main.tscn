@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b86wj8bvmurcx"]
+[gd_scene load_steps=6 format=3 uid="uid://pobpiiojqogp"]
 
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background_black.png" id="1_wm7ti"]
-[ext_resource type="PackedScene" uid="uid://pgx5c4t2p3pg" path="res://player/player.tscn" id="2_ltcjb"]
-[ext_resource type="PackedScene" uid="uid://vj65um5o2ibq" path="res://asteroids/asteroid_large.tscn" id="3_fxrky"]
-[ext_resource type="PackedScene" uid="uid://cu1uxwo0a48fv" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
-[ext_resource type="PackedScene" uid="uid://dmigg8vyygel8" path="res://ufo/ufo.tscn" id="5_qxc4i"]
+[ext_resource type="PackedScene" uid="uid://d3f3g3bc7j2m6" path="res://player/player.tscn" id="2_ltcjb"]
+[ext_resource type="PackedScene" path="res://asteroids/asteroid_large/asteroid_large.tscn" id="3_fxrky"]
+[ext_resource type="PackedScene" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
+[ext_resource type="PackedScene" uid="uid://dm7l7x32oam3p" path="res://ufo/ufo.tscn" id="5_qxc4i"]
 
 [node name="Main" type="Node"]
 
@@ -28,13 +28,10 @@ position = Vector2(508, 338)
 [node name="Asteroids" type="Node" parent="."]
 
 [node name="AsteroidBig" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(364, 161)
+position = Vector2(115, 390)
 
 [node name="AsteroidBig2" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(759, 433)
-
-[node name="AsteroidBig3" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(133, 336)
+position = Vector2(786, 168)
 
 [node name="UFO" parent="." instance=ExtResource( "5_qxc4i" )]
 position = Vector2(315, 310)

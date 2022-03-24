@@ -18,7 +18,7 @@ curve = SubResource( "Curve_bqiyo" )
 
 [sub_resource type="ParticlesMaterial" id="ParticlesMaterial_r33lf"]
 emission_shape = 1
-emission_sphere_radius = 15.0
+emission_sphere_radius = 30.0
 particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
 spread = 180.0
@@ -29,6 +29,8 @@ angular_velocity_min = -360.0
 angular_velocity_max = 360.0
 orbit_velocity_min = -0.1
 orbit_velocity_max = 0.1
+scale_min = 0.75
+scale_max = 1.25
 scale_curve = SubResource( "CurveTexture_q8rl8" )
 anim_offset_max = 1.0
 

@@ -1,25 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmigg8vyygel8"]
+[gd_scene load_steps=7 format=3 uid="uid://dm7l7x32oam3p"]
 
 [ext_resource type="Script" path="res://ufo/ufo.gd" id="1_nkgyr"]
-[ext_resource type="PackedScene" uid="uid://bb7ndqq5jk8bh" path="res://laser_gun/laser_gun.tscn" id="2_1xvnt"]
+[ext_resource type="PackedScene" path="res://weapon/weapon.tscn" id="2_1xvnt"]
 [ext_resource type="Texture2D" uid="uid://ds2cbxahp03xe" path="res://ufo/assets/textures/ufo_green.png" id="2_65cia"]
-[ext_resource type="PackedScene" uid="uid://cnuphdu33yw6e" path="res://projectiles/laser_red/laser_red.tscn" id="3_dkr34"]
+[ext_resource type="PackedScene" path="res://projectiles/laser_red/laser_red.tscn" id="3_dkr34"]
 [ext_resource type="AudioStream" uid="uid://corsvlygkomb6" path="res://ufo/assets/sfx/ufo.ogg" id="3_reo7d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwrn0"]
-radius = 22.0
+radius = 34.0
 
 [node name="UFO" type="RigidDynamicBody2D"]
 collision_layer = 2
 angular_velocity = 4.0
 script = ExtResource( "1_nkgyr" )
 
-[node name="LaserGun" parent="." instance=ExtResource( "2_1xvnt" )]
-position = Vector2(0, -40)
+[node name="Weapon" parent="." instance=ExtResource( "2_1xvnt" )]
+position = Vector2(0, -50)
 projectile_scene = ExtResource( "3_dkr34" )
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource( "2_65cia" )
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]

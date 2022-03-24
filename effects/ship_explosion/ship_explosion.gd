@@ -6,7 +6,6 @@ extends Node2D
 
 func _ready() -> void:
 	particles.emitting = true
-	# TODO: remove warning ignore after fix: https://github.com/godotengine/godot/issues/56265
-	@warning_ignore(redundant_await)
+	@warning_ignore(redundant_await) # TODO: remove warning ignore after fix: https://github.com/godotengine/godot/issues/56265
 	await sfx.finished
 	queue_free()
