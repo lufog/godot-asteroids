@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3hn3mprf1cyi"]
+
+[ext_resource type="Script" path="res://effects/laser_red_collision/laser_red_collision.gd" id="1_a87u8"]
+[ext_resource type="Texture2D" uid="uid://tfiuva8l5jjl" path="res://effects/laser_red_collision/assets/textures/laser_red_collision_1.png" id="1_kj3br"]
+[ext_resource type="Texture2D" uid="uid://ddjod3e0nh6na" path="res://effects/laser_red_collision/assets/textures/laser_red_collision_2.png" id="2_adt26"]
+[ext_resource type="Texture2D" uid="uid://biax67q5eyg3s" path="res://effects/laser_red_collision/assets/textures/laser_red_collision_3.png" id="3_kck6x"]
+[ext_resource type="Texture2D" uid="uid://deasuj0jxibdo" path="res://effects/laser_red_collision/assets/textures/laser_red_collision_4.png" id="4_l27nq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_odd7v"]
+animations = [{
+"frames": [ExtResource( "1_kj3br" ), ExtResource( "2_adt26" ), ExtResource( "3_kck6x" ), ExtResource( "4_l27nq" )],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="LaserRedCollision" type="Node2D"]
+script = ExtResource( "1_a87u8" )
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+frames = SubResource( "SpriteFrames_odd7v" )

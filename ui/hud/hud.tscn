@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cuqmbisac84sm"]
 
-[ext_resource type="Texture2D" path="res://ui/hud/assets/textures/player_life.png" id="1_ygxrd"]
+[ext_resource type="Texture2D" uid="uid://b5j2l0mnxchxx" path="res://ui/hud/assets/textures/player_life.png" id="1_ygxrd"]
 [ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_yspea"]
 
 [node name="HUD" type="Control"]
@@ -17,6 +17,3 @@ offset_bottom = 36.0
 texture = ExtResource( "1_ygxrd" )
 ignore_texture_size = true
 stretch_mode = 1
-__meta__ = {
-"_edit_use_custom_anchors": false
-}

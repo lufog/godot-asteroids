@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://oxgv6nt3nksf"]
 
 [ext_resource type="Script" path="res://projectiles/projectile.gd" id="1_n0kia"]
-[ext_resource type="Texture2D" path="res://projectiles/laser_green/assets/textures/green_laser.png" id="2_gbwev"]
-[ext_resource type="AudioStream" path="res://projectiles/laser_green/assets/sfx/green_laser.ogg" id="3_5m8kb"]
+[ext_resource type="Texture2D" uid="uid://c48o22r75hnvh" path="res://projectiles/laser_green/assets/textures/green_laser.png" id="2_gbwev"]
+[ext_resource type="PackedScene" uid="uid://cdn4qrrvnyt4t" path="res://effects/laser_green_collision/laser_green_collision.tscn" id="2_gfgvw"]
+[ext_resource type="AudioStream" uid="uid://b03hi75ctsevv" path="res://projectiles/laser_green/assets/sfx/green_laser.ogg" id="3_5m8kb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwniw"]
 size = Vector2(6, 22)
@@ -12,6 +13,7 @@ collision_layer = 0
 collision_mask = 6
 monitorable = false
 script = ExtResource( "1_n0kia" )
+collosion_effect_scene = ExtResource( "2_gfgvw" )
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
@@ -23,6 +25,7 @@ stream = ExtResource( "3_5m8kb" )
 autoplay = true
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( "RectangleShape2D_jwniw" )
 
 [node name="LifetimeTimer" type="Timer" parent="."]

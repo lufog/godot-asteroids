@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://cwb2c6qrhf7sd"]
 
 [ext_resource type="Script" path="res://asteroids/asteroid_large/asteroid_large.gd" id="1_j365y"]
 [ext_resource type="Texture2D" uid="uid://ci8ovaf7gpptj" path="res://asteroids/asteroid_large/assets/textures/asteroid_lg.png" id="2_g7hag"]
-[ext_resource type="PackedScene" path="res://spawners/debris_spawner/debris spawner.tscn" id="3_qh08m"]
-[ext_resource type="PackedScene" path="res://asteroids/asteroid_medium/asteroid_medium.tscn" id="4_y1iai"]
+[ext_resource type="PackedScene" uid="uid://c4vqeypypnd4e" path="res://spawners/debris_spawner/debris spawner.tscn" id="3_qh08m"]
+[ext_resource type="PackedScene" uid="uid://du54mxf810hr3" path="res://asteroids/asteroid_medium/asteroid_medium.tscn" id="4_y1iai"]
 
 [node name="AsteroidLarge" type="RigidDynamicBody2D"]
 collision_layer = 4

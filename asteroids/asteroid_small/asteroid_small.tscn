@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://deojm6wwk31o7"]
 
 [ext_resource type="Script" path="res://asteroids/asteroid_small/asteroid_small.gd" id="1_c0bpj"]
 [ext_resource type="Texture2D" uid="uid://cvnqncy6w3tw6" path="res://asteroids/asteroid_small/assets/textures/asteroid_sm.png" id="2_jdevx"]

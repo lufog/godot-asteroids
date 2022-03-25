@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background_black.png" id="1_wm7ti"]
 [ext_resource type="PackedScene" uid="uid://d3f3g3bc7j2m6" path="res://player/player.tscn" id="2_ltcjb"]
-[ext_resource type="PackedScene" path="res://asteroids/asteroid_large/asteroid_large.tscn" id="3_fxrky"]
-[ext_resource type="PackedScene" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
+[ext_resource type="PackedScene" uid="uid://cwb2c6qrhf7sd" path="res://asteroids/asteroid_large/asteroid_large.tscn" id="3_fxrky"]
+[ext_resource type="PackedScene" uid="uid://cuqmbisac84sm" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
 [ext_resource type="PackedScene" uid="uid://dm7l7x32oam3p" path="res://ufo/ufo.tscn" id="5_qxc4i"]
 
 [node name="Main" type="Node"]
@@ -18,9 +18,6 @@ texture = ExtResource( "1_wm7ti" )
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 600)
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Player" parent="." instance=ExtResource( "2_ltcjb" )]
 position = Vector2(508, 338)
@@ -28,7 +25,7 @@ position = Vector2(508, 338)
 [node name="Asteroids" type="Node" parent="."]
 
 [node name="AsteroidBig" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
-position = Vector2(115, 390)
+position = Vector2(164, 126)
 
 [node name="AsteroidBig2" parent="Asteroids" instance=ExtResource( "3_fxrky" )]
 position = Vector2(786, 168)

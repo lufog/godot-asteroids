@@ -2,6 +2,7 @@ class_name Projectile extends Area2D
 
 @export var speed := 600.0
 @export var lifetime := 1.1
+@export var collosion_effect_scene: PackedScene
 
 @onready var forward_direction := Vector2.UP.rotated(rotation)
 @onready var lifetime_timer := $LifetimeTimer as Timer
@@ -26,4 +27,7 @@ func _on_laser_body_entered(body: Node2D) -> void:
 
 
 func destroy() -> void:
+	var collision_effect := collosion_effect_scene.instantiate() as Node2D
+	collision_effect.position = position
+	get_parent().add_child(collision_effect)
 	queue_free()
