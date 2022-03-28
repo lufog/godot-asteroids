@@ -12,22 +12,12 @@ _global_script_classes=[{
 "base": "RigidDynamicBody2D",
 "class": &"Asteroid",
 "language": &"GDScript",
-"path": "res://asteroids/asteroid.gd"
+"path": "res://asteroid/asteroid.gd"
 }, {
-"base": "Asteroid",
-"class": &"AsteroidLarge",
+"base": "Resource",
+"class": &"AsteroidType",
 "language": &"GDScript",
-"path": "res://asteroids/asteroid_large/asteroid_large.gd"
-}, {
-"base": "Asteroid",
-"class": &"AsteroidMedium",
-"language": &"GDScript",
-"path": "res://asteroids/asteroid_medium/asteroid_medium.gd"
-}, {
-"base": "Asteroid",
-"class": &"AsteroidSmall",
-"language": &"GDScript",
-"path": "res://asteroids/asteroid_small/asteroid_small.gd"
+"path": "res://asteroid/asteroid_type.gd"
 }, {
 "base": "Node2D",
 "class": &"DebrisSpawner",
@@ -51,9 +41,7 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "Asteroid": "",
-"AsteroidLarge": "",
-"AsteroidMedium": "",
-"AsteroidSmall": "",
+"AsteroidType": "",
 "DebrisSpawner": "",
 "Projectile": "",
 "Thruster": "",
