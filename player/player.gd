@@ -28,13 +28,6 @@ func _ready() -> void:
 	lives = max_lives
 
 
-# TODO: Remove after implementing player damage
-func _input(event: InputEvent) -> void:
-	var just_pressed = event.is_pressed() and not event.is_echo()
-	if Input.is_key_pressed(KEY_Q) and just_pressed:
-		lives -= 1
-
-
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("move_forward"):
 		thruster_left.active  = true
@@ -62,6 +55,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 
 func destroy() -> void:
+	lives -= 1
+	
 	var explosion_effect := explosion_effect_scene.instantiate() as Node2D
 	explosion_effect.position = position
 	get_parent().add_child(explosion_effect)

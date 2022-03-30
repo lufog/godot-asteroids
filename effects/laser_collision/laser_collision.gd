@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @onready var animated_sprite := $AnimatedSprite as AnimatedSprite2D
 
 

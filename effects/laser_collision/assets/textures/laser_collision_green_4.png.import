@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deasuj0jxibdo"
-path="res://.godot/imported/laser_red_collision_4.png-85505058a8c98e2e31d78f9b9d6303ee.ctex"
+uid="uid://cy5sxhnmitdhp"
+path="res://.godot/imported/laser_collision_green_4.png-96aa84555a4f18f85a64af6f09164d9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://effects/laser_red_collision/assets/textures/laser_red_collision_4.png"
-dest_files=["res://.godot/imported/laser_red_collision_4.png-85505058a8c98e2e31d78f9b9d6303ee.ctex"]
+source_file="res://effects/laser_collision/assets/textures/laser_collision_green_4.png"
+dest_files=["res://.godot/imported/laser_collision_green_4.png-96aa84555a4f18f85a64af6f09164d9b.ctex"]
 
 [params]
 

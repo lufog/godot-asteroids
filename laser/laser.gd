@@ -10,7 +10,7 @@ extends Area2D
 
 func _physics_process(delta: float) -> void:
 	position += forward_direction * speed * delta
-	#position = Helpers.screen_wrap(position)
+	position = Helpers.screen_wrap(position)
 
 
 func _on_lifetime_timer_timeout() -> void:

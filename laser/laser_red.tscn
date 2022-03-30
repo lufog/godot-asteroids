@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://clnyx8ky6vod"]
 
 [ext_resource type="PackedScene" uid="uid://8n4jl5ynhwh1" path="res://laser/laser.tscn" id="1_832r2"]
-[ext_resource type="PackedScene" uid="uid://b3hn3mprf1cyi" path="res://effects/laser_red_collision/laser_red_collision.tscn" id="2_05q7h"]
-[ext_resource type="Texture2D" uid="uid://hol7lqa7sfu7" path="res://laser/assets/textures/red_laser.png" id="2_o7aig"]
+[ext_resource type="PackedScene" uid="uid://sufguafuirl7" path="res://effects/laser_collision/laser_collision_red.tscn" id="2_0srtg"]
+[ext_resource type="Texture2D" uid="uid://01gj3nnkiqnn" path="res://laser/assets/textures/laser_red.png" id="3_ifhuh"]
 [ext_resource type="AudioStream" uid="uid://uk5861ylqrvu" path="res://laser/assets/sfx/red_laser.ogg" id="3_mbnh0"]
 
 [node name="Laser" instance=ExtResource( "1_832r2" )]
 collision_mask = 5
 speed = 400.0
-collision_effect_scene = ExtResource( "2_05q7h" )
+collision_effect_scene = ExtResource( "2_0srtg" )
 
 [node name="Sprite" parent="." index="0"]
-texture = ExtResource( "2_o7aig" )
+texture = ExtResource( "3_ifhuh" )
 
 [node name="SFX" parent="." index="2"]
 stream = ExtResource( "3_mbnh0" )

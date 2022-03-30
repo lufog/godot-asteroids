@@ -1,5 +1,6 @@
 class_name Thruster extends AnimatedSprite2D
 
+
 var active := false
 
 @onready var sfx := $SFX as AudioStreamPlayer2D
