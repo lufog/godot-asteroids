@@ -2,8 +2,9 @@ class_name Asteroid
 extends RigidDynamicBody2D
 
 
-@export var debris_amount: int = 0
+@export var debris_amount := 0
 @export var debris_scenes: Array[PackedScene]
+@export var debris_velosity_multiplier := 1.5
 
 const angular_velocity_range := 1.0
 var explosion_effect_scene := preload("res://effects/asteroid_explosion/asteroid_explosion.tscn") as PackedScene
@@ -19,11 +20,12 @@ func destroy() -> void:
 	queue_free()
 
 
-func _spawn_single_debris(new_velosity: Vector2) -> void:
+func _spawn_single_debris(direction: Vector2) -> void:
 	var index := randi_range(0, debris_scenes.size() - 1)
 	var debris := debris_scenes[index].instantiate() as Asteroid
+	var new_velocity = direction * linear_velocity.length() * debris_velosity_multiplier
 	debris.position = position
-	debris.linear_velocity = new_velosity
+	debris.linear_velocity = new_velocity
 	debris.angular_velocity = randf_range(-angular_velocity_range, angular_velocity_range)
 	get_parent().add_child.call_deferred(debris)
 
@@ -35,7 +37,8 @@ func _spawn_debris() -> void:
 	
 	if (debris_amount == 1):
 		# One debris, assign the same linear_velocity to it
-		_spawn_single_debris(linear_velocity)
+		var new_direction := linear_velocity.normalized()
+		_spawn_single_debris(new_direction)
 	
 	else:
 		# More than one debris, calculate deflected linear_velocity for each
@@ -45,8 +48,8 @@ func _spawn_debris() -> void:
 		
 		for i in debris_amount:
 			var deflection := Vector2.UP.rotated(direction_angle + deflection_angle * i)
-			var new_velosity := (direction + deflection).normalized() * linear_velocity.length()
-			_spawn_single_debris(new_velosity)
+			var new_direction := (direction + deflection).normalized()
+			_spawn_single_debris(new_direction)
 
 
 func _spawn_explosion_effect() -> void:

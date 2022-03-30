@@ -50,6 +50,7 @@ Helpers="*res://autoloads/helpers.gd"
 
 [display]
 
+mouse_cursor/custom_image="res://ui/assets/textures/cursor.png"
 window/stretch/mode="canvas_items"
 
 [input]

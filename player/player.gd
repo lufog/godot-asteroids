@@ -2,8 +2,8 @@ extends RigidDynamicBody2D
 
 
 @export var max_lives: int = 3
-@export var thrust_force: float = 500
-@export var turn_force: float = 1000
+@export var thrust_force: float = 2500
+@export var turn_force: float = 5000
 
 var explosion_effect_scene := preload("res://effects/ship_explosion/ship_explosion.tscn")
 

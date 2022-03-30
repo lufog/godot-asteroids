@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://co2l7naxto5r8" path="res://asteroid/asteroid.tscn" id="1_mrgyf"]
 [ext_resource type="Texture2D" uid="uid://b1xpsvuhasqyl" path="res://asteroid/assets/textures/asteroid_lg_2.png" id="2_6pk3y"]
-[ext_resource type="PackedScene" path="res://asteroid/asteroid_md.tscn" id="2_l2ols"]
-[ext_resource type="PackedScene" path="res://asteroid/asteroid_md_2.tscn" id="3_8sfh3"]
+[ext_resource type="PackedScene" uid="uid://7b2tpg4qjx6t" path="res://asteroid/asteroid_md.tscn" id="2_l2ols"]
+[ext_resource type="PackedScene" uid="uid://dmofbb0e0a1p2" path="res://asteroid/asteroid_md_2.tscn" id="3_8sfh3"]
 
 [node name="Asteroid" instance=ExtResource( "1_mrgyf" )]
+mass = 100.0
 debris_amount = 2
 debris_scenes = [ExtResource( "2_l2ols" ), ExtResource( "3_8sfh3" )]
 

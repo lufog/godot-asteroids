@@ -1,11 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmofbb0e0a1p2"]
 
 [ext_resource type="PackedScene" uid="uid://co2l7naxto5r8" path="res://asteroid/asteroid.tscn" id="1_cxcdv"]
-[ext_resource type="PackedScene" path="res://asteroid/asteroid_sm.tscn" id="2_8al5t"]
+[ext_resource type="PackedScene" uid="uid://wk0qtcnpoxya" path="res://asteroid/asteroid_sm.tscn" id="2_8al5t"]
 [ext_resource type="Texture2D" uid="uid://pkwq35cli3hs" path="res://asteroid/assets/textures/asteroid_md_2.png" id="2_dogf6"]
 [ext_resource type="PackedScene" uid="uid://cfr045boebkic" path="res://asteroid/asteroid_sm_2.tscn" id="3_7l7v8"]
 
 [node name="Asteroid" instance=ExtResource( "1_cxcdv" )]
+mass = 50.0
 debris_amount = 2
 debris_scenes = [ExtResource( "2_8al5t" ), ExtResource( "3_7l7v8" )]
 

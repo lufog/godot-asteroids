@@ -8,6 +8,7 @@
 
 [node name="Player" type="RigidDynamicBody2D"]
 collision_mask = 6
+mass = 5.0
 linear_damp = 1.0
 angular_damp = 1.0
 script = ExtResource( "1_aj8ry" )
