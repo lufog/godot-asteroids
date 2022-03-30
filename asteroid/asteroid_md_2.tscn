@@ -7,6 +7,7 @@
 
 [node name="Asteroid" instance=ExtResource( "1_cxcdv" )]
 mass = 50.0
+score_poins = 50
 debris_amount = 2
 debris_scenes = [ExtResource( "2_8al5t" ), ExtResource( "3_7l7v8" )]
 

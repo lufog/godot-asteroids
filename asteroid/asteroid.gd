@@ -1,7 +1,7 @@
 class_name Asteroid
 extends RigidDynamicBody2D
 
-
+@export var score_poins := 0
 @export var debris_amount := 0
 @export var debris_scenes: Array[PackedScene]
 @export var debris_velosity_multiplier := 1.5
@@ -17,6 +17,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 func destroy() -> void:
 	_spawn_debris()
 	_spawn_explosion_effect()
+	
+	GameManager.score += score_poins
+	
 	queue_free()
 
 

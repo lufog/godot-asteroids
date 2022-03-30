@@ -1,5 +1,7 @@
 extends Node
 
 
-signal player_lives_changed(amount: int)
+signal score_changed(value: int)
+
+signal player_lives_changed(value: int)
 signal player_died

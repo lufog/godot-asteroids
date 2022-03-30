@@ -1,19 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuqmbisac84sm"]
+[gd_scene load_steps=4 format=3 uid="uid://cuqmbisac84sm"]
 
+[ext_resource type="Theme" path="res://global/resources/themes/default.tres" id="1_rul6a"]
 [ext_resource type="Texture2D" uid="uid://b5j2l0mnxchxx" path="res://ui/hud/assets/textures/player_life.png" id="1_ygxrd"]
 [ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_yspea"]
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( "1_rul6a" )
 script = ExtResource( "1_yspea" )
 lives_nodepath = NodePath("Lives")
+score_value_nodepath = NodePath("Score/Value")
 
 [node name="Lives" type="TextureRect" parent="."]
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 43.0
-offset_bottom = 36.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 53.0
+offset_bottom = 46.0
 texture = ExtResource( "1_ygxrd" )
 ignore_texture_size = true
 stretch_mode = 1
+
+[node name="Score" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 14.0
+offset_right = 176.0
+offset_bottom = 50.0
+grow_horizontal = 2
+alignment = 1
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = false
+
+[node name="Label" type="Label" parent="Score"]
+offset_left = 115.0
+offset_right = 216.0
+offset_bottom = 36.0
+text = "Score: "
+vertical_alignment = 1
+uppercase = true
+
+[node name="Value" type="Label" parent="Score"]
+offset_left = 220.0
+offset_right = 237.0
+offset_bottom = 36.0
+text = "0"
+vertical_alignment = 1
+uppercase = true

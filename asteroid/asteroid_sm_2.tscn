@@ -5,6 +5,7 @@
 
 [node name="Asteroid" instance=ExtResource( "1_00tbf" )]
 mass = 25.0
+score_poins = 100
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource( "2_hto0v" )

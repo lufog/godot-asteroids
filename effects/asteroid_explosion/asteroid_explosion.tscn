@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqpukr6anax4o"]
+[gd_scene load_steps=8 format=3 uid="uid://4pru8pw5iv58"]
 
 [ext_resource type="Script" path="res://effects/asteroid_explosion/asteroid_explosion.gd" id="1_q366j"]
-[ext_resource type="Texture2D" uid="uid://b7bunilprqsbq" path="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png" id="1_xpd1u"]
-[ext_resource type="AudioStream" uid="uid://cea3u1drudjvv" path="res://effects/asteroid_explosion/assets/sfx/asteroid_explosion.ogg" id="3_xpk54"]
+[ext_resource type="Texture2D" uid="uid://ck6rlxhrsjvp6" path="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png" id="2_o6yyf"]
+[ext_resource type="AudioStream" uid="uid://dm31b6ftsjk0p" path="res://effects/asteroid_explosion/assets/sfx/asteroid_explosion.ogg" id="3_gh0y4"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fab6d"]
 particles_animation = true
@@ -43,8 +43,8 @@ amount = 10
 one_shot = true
 explosiveness = 0.5
 process_material = SubResource( "ParticlesMaterial_r33lf" )
-texture = ExtResource( "1_xpd1u" )
+texture = ExtResource( "2_o6yyf" )
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( "3_xpk54" )
+stream = ExtResource( "3_gh0y4" )
 autoplay = true
