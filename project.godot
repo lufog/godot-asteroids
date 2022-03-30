@@ -20,9 +20,9 @@ _global_script_classes=[{
 "path": "res://spawners/debris_spawner/debris spawner.gd"
 }, {
 "base": "Area2D",
-"class": &"Projectile",
+"class": &"Laser",
 "language": &"GDScript",
-"path": "res://projectiles/projectile.gd"
+"path": "res://laser/laser.gd"
 }, {
 "base": "AnimatedSprite2D",
 "class": &"Thruster",
@@ -37,7 +37,7 @@ _global_script_classes=[{
 _global_script_class_icons={
 "Asteroid": "",
 "DebrisSpawner": "",
-"Projectile": "",
+"Laser": "",
 "Thruster": "",
 "Weapon": ""
 }

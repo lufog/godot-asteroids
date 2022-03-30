@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://ufo/ufo.gd" id="1_nkgyr"]
 [ext_resource type="PackedScene" uid="uid://bv4pyu6dk3ol1" path="res://weapon/weapon.tscn" id="2_1xvnt"]
 [ext_resource type="Texture2D" uid="uid://ds2cbxahp03xe" path="res://ufo/assets/textures/ufo_green.png" id="2_65cia"]
-[ext_resource type="PackedScene" uid="uid://cltgc7qw5nnx5" path="res://projectiles/laser_red/laser_red.tscn" id="3_dkr34"]
+[ext_resource type="PackedScene" uid="uid://clnyx8ky6vod" path="res://laser/laser_red.tscn" id="3_r12mb"]
 [ext_resource type="AudioStream" uid="uid://corsvlygkomb6" path="res://ufo/assets/sfx/ufo.ogg" id="3_reo7d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwrn0"]
@@ -16,7 +16,7 @@ script = ExtResource( "1_nkgyr" )
 
 [node name="Weapon" parent="." instance=ExtResource( "2_1xvnt" )]
 position = Vector2(0, -50)
-projectile_scene = ExtResource( "3_dkr34" )
+_laser_scene = ExtResource( "3_r12mb" )
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.75, 0.75)

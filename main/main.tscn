@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://7avvihldgiw2"]
+[gd_scene load_steps=6 format=3 uid="uid://7avvihldgiw2"]
 
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background_black.png" id="1_wm7ti"]
 [ext_resource type="PackedScene" uid="uid://d3f3g3bc7j2m6" path="res://player/player.tscn" id="2_ltcjb"]
+[ext_resource type="PackedScene" uid="uid://dix63meuq4d5f" path="res://asteroid/asteroid_lg.tscn" id="4_keekd"]
 [ext_resource type="PackedScene" uid="uid://cuqmbisac84sm" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
+[ext_resource type="PackedScene" uid="uid://d262unqwn21ln" path="res://asteroid/asteroid_lg_2.tscn" id="5_t18nr"]
 
 [node name="Main" type="Node"]
 
@@ -21,3 +23,9 @@ region_rect = Rect2(0, 0, 1024, 600)
 position = Vector2(508, 338)
 
 [node name="Asteroids" type="Node" parent="."]
+
+[node name="Asteroid" parent="Asteroids" instance=ExtResource( "4_keekd" )]
+position = Vector2(224, 262)
+
+[node name="Asteroid" parent="." instance=ExtResource( "5_t18nr" )]
+position = Vector2(772, 151)

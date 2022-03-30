@@ -1,5 +1,6 @@
 extends RigidDynamicBody2D
 
+
 @export var max_lives: int = 3
 @export var thrust_force: float = 500
 @export var turn_force: float = 1000
@@ -57,7 +58,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	Helpers.physics_body_screen_wrap(state)
+	Helpers.screen_wrap_physics_body(state)
 
 
 func destroy() -> void:

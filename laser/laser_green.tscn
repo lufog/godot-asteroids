@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://desw0ate6ecgo"]
+
+[ext_resource type="PackedScene" uid="uid://8n4jl5ynhwh1" path="res://laser/laser.tscn" id="1_qdmnb"]
+[ext_resource type="PackedScene" uid="uid://cdn4qrrvnyt4t" path="res://effects/laser_green_collision/laser_green_collision.tscn" id="2_0svmf"]
+[ext_resource type="Texture2D" uid="uid://c48o22r75hnvh" path="res://laser/assets/textures/green_laser.png" id="2_yjix1"]
+[ext_resource type="AudioStream" uid="uid://b03hi75ctsevv" path="res://laser/assets/sfx/green_laser.ogg" id="3_0punc"]
+
+[node name="Laser" instance=ExtResource( "1_qdmnb" )]
+collision_mask = 6
+speed = 600.0
+collision_effect_scene = ExtResource( "2_0svmf" )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( "2_yjix1" )
+
+[node name="SFX" parent="." index="2"]
+stream = ExtResource( "3_0punc" )

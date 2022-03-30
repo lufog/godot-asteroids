@@ -10,7 +10,7 @@ var explosion_effect_scene := preload("res://effects/asteroid_explosion/asteroid
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	Helpers.physics_body_screen_wrap(state)
+	Helpers.screen_wrap_physics_body(state)
 
 
 func destroy() -> void:

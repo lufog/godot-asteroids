@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://7b2tpg4qjx6t"]
 
 [ext_resource type="PackedScene" uid="uid://co2l7naxto5r8" path="res://asteroid/asteroid.tscn" id="1_tj555"]
 [ext_resource type="PackedScene" path="res://asteroid/asteroid_sm.tscn" id="2_1pt1w"]

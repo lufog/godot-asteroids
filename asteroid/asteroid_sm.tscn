@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://wk0qtcnpoxya"]
 
 [ext_resource type="PackedScene" uid="uid://co2l7naxto5r8" path="res://asteroid/asteroid.tscn" id="1_5hsqd"]
-[ext_resource type="Texture2D" path="res://asteroid/assets/textures/asteroid_sm.png" id="2_h14i4"]
+[ext_resource type="Texture2D" uid="uid://4wbpey3sfh2h" path="res://asteroid/assets/textures/asteroid_sm.png" id="2_h14i4"]
 
 [node name="Asteroid" instance=ExtResource( "1_5hsqd" )]
 

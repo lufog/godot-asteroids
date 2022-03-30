@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player/player.gd" id="1_aj8ry"]
 [ext_resource type="Texture2D" uid="uid://w47rqm6kpq2e" path="res://player/assets/textures/spaceship.png" id="2_dl54q"]
 [ext_resource type="PackedScene" uid="uid://bv4pyu6dk3ol1" path="res://weapon/weapon.tscn" id="2_f8v5q"]
-[ext_resource type="PackedScene" uid="uid://oxgv6nt3nksf" path="res://projectiles/laser_green/laser_green.tscn" id="3_vksow"]
+[ext_resource type="PackedScene" uid="uid://desw0ate6ecgo" path="res://laser/laser_green.tscn" id="3_c27s2"]
 [ext_resource type="PackedScene" uid="uid://b715cnuex20xc" path="res://thruster/thruster.tscn" id="4_tj87x"]
 
 [node name="Player" type="RigidDynamicBody2D"]
@@ -14,7 +14,7 @@ script = ExtResource( "1_aj8ry" )
 
 [node name="Weapon" parent="." instance=ExtResource( "2_f8v5q" )]
 position = Vector2(0, -50)
-projectile_scene = ExtResource( "3_vksow" )
+_laser_scene = ExtResource( "3_c27s2" )
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
