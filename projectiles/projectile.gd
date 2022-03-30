@@ -1,4 +1,5 @@
-class_name Projectile extends Area2D
+class_name Projectile 
+extends Area2D
 
 @export var speed := 600.0
 @export var lifetime := 1.1
@@ -22,8 +23,8 @@ func _on_lifetime_timer_timeout() -> void:
 
 func _on_laser_body_entered(body: Node2D) -> void:
 	if body.has_method("destroy"):
-		body.destroy()
 		destroy()
+		body.destroy()
 
 
 func destroy() -> void:

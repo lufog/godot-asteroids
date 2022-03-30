@@ -1,14 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv4wlr8fhucwg"]
+[gd_scene load_steps=2 format=3 uid="uid://co2l7naxto5r8"]
 
-[ext_resource type="Script" path="res://asteroid/asteroid.gd" id="1_1j1sk"]
-[ext_resource type="Texture2D" uid="uid://b63kwgnefmdmq" path="res://asteroid/assets/textures/asteroid_lg_1.png" id="2_t7fci"]
+[ext_resource type="Script" path="res://asteroid/asteroid.gd" id="1_0ho7e"]
 
 [node name="Asteroid" type="RigidDynamicBody2D"]
 collision_layer = 4
 collision_mask = 3
-script = ExtResource( "1_1j1sk" )
+script = ExtResource( "1_0ho7e" )
 
-[node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource( "2_t7fci" )
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="CollisionShape" type="CollisionShape2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false

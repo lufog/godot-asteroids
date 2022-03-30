@@ -14,11 +14,6 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://asteroid/asteroid.gd"
 }, {
-"base": "Resource",
-"class": &"AsteroidType",
-"language": &"GDScript",
-"path": "res://asteroid/asteroid_type.gd"
-}, {
 "base": "Node2D",
 "class": &"DebrisSpawner",
 "language": &"GDScript",
@@ -41,7 +36,6 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "Asteroid": "",
-"AsteroidType": "",
 "DebrisSpawner": "",
 "Projectile": "",
 "Thruster": "",
