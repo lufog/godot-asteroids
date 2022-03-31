@@ -4,7 +4,7 @@ extends Control
 @export var lives_nodepath: NodePath
 @export var score_value_nodepath: NodePath
 
-@onready var lives := get_node(lives_nodepath) as TextureRect
+@onready var lives_value := get_node(lives_nodepath) as Label
 @onready var score_value := get_node(score_value_nodepath) as Label
 
 
@@ -17,5 +17,5 @@ func _on_score_changed(value: int) -> void:
 	score_value.text = str(value)
 
 
-func _on_player_lives_changed(count: int) -> void:
-	lives.size.x = count * lives.texture.get_size().x
+func _on_player_lives_changed(value: int) -> void:
+	lives_value.text = str(value)

@@ -1,25 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuqmbisac84sm"]
+[gd_scene load_steps=5 format=3 uid="uid://cuqmbisac84sm"]
 
-[ext_resource type="Theme" path="res://global/resources/themes/default.tres" id="1_rul6a"]
+[ext_resource type="Theme" uid="uid://dipr2s0t3b57c" path="res://global/resources/themes/default.tres" id="1_rul6a"]
 [ext_resource type="Texture2D" uid="uid://b5j2l0mnxchxx" path="res://ui/hud/assets/textures/player_life.png" id="1_ygxrd"]
 [ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_yspea"]
+[ext_resource type="Texture2D" uid="uid://xd36lmbr8hk0" path="res://ui/hud/assets/textures/numeral_x.png" id="4_g1utf"]
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( "1_rul6a" )
 script = ExtResource( "1_yspea" )
-lives_nodepath = NodePath("Lives")
+lives_nodepath = NodePath("Lives/Value")
 score_value_nodepath = NodePath("Score/Value")
 
-[node name="Lives" type="TextureRect" parent="."]
+[node name="Lives" type="HBoxContainer" parent="."]
 offset_left = 20.0
-offset_top = 20.0
-offset_right = 53.0
-offset_bottom = 46.0
+offset_top = 16.0
+offset_right = 108.0
+offset_bottom = 52.0
+metadata/_edit_layout_mode = 0
+metadata/_edit_use_custom_anchors = false
+
+[node name="CenterContainer" type="CenterContainer" parent="Lives"]
+offset_right = 33.0
+offset_bottom = 36.0
+
+[node name="TextureRect" type="TextureRect" parent="Lives/CenterContainer"]
+offset_top = 5.0
+offset_right = 33.0
+offset_bottom = 31.0
 texture = ExtResource( "1_ygxrd" )
-ignore_texture_size = true
-stretch_mode = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="Lives"]
+offset_left = 37.0
+offset_right = 54.0
+offset_bottom = 36.0
+
+[node name="TextureRect" type="TextureRect" parent="Lives/CenterContainer2"]
+offset_top = 9.0
+offset_right = 17.0
+offset_bottom = 26.0
+texture = ExtResource( "4_g1utf" )
+
+[node name="Value" type="Label" parent="Lives"]
+offset_left = 58.0
+offset_right = 75.0
+offset_bottom = 36.0
+text = "0"
+vertical_alignment = 1
 
 [node name="Score" type="HBoxContainer" parent="."]
 anchor_left = 0.5
