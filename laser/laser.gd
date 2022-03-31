@@ -5,12 +5,14 @@ extends Area2D
 @export var speed := 100.0
 @export var collision_effect_scene: PackedScene
 
+@onready var sprite := $Sprite as Sprite2D
+@onready var sprite_rect := sprite.get_rect()
 @onready var forward_direction := Vector2.UP.rotated(rotation)
 
 
 func _physics_process(delta: float) -> void:
 	position += forward_direction * speed * delta
-	position = Helpers.screen_wrap(position)
+	position = Helpers.screen_wrap(position, sprite_rect.size)
 
 
 func _on_lifetime_timer_timeout() -> void:

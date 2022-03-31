@@ -22,6 +22,8 @@ var lives:
 @onready var weapon := $Weapon as Weapon
 @onready var thruster_left  := $Thrusters/ThrusterLeft  as Thruster
 @onready var thruster_right := $Thrusters/ThrusterRight as Thruster
+@onready var sprite := $Sprite as Sprite2D
+@onready var sprite_rect := sprite.get_rect()
 
 
 func _ready() -> void:
@@ -51,7 +53,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	Helpers.screen_wrap_physics_body(state)
+	Helpers.screen_wrap_physics_body(state, sprite_rect.size)
 
 
 func destroy() -> void:

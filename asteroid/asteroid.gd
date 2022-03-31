@@ -9,9 +9,12 @@ extends RigidDynamicBody2D
 const angular_velocity_range := 1.0
 var explosion_effect_scene := preload("res://effects/asteroid_explosion/asteroid_explosion.tscn") as PackedScene
 
+@onready var sprite := $Sprite as Sprite2D
+@onready var sprite_rect := sprite.get_rect()
+
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	Helpers.screen_wrap_physics_body(state)
+	Helpers.screen_wrap_physics_body(state, sprite_rect.size)
 
 
 func destroy() -> void:
