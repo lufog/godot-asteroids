@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://38mgdu8rst3w"
-path="res://.godot/imported/asteroid_explosion_particles.png-398136eb15c418b62836df9c40fbd2df.ctex"
+uid="uid://dcqkc7hhiybos"
+path="res://.godot/imported/asteroid_trail_particles.png-1f3c99493c0fa64ce1e2a29259ea64aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://effects/asteroid_explosion/assets/textures/asteroid_explosion_particles.png"
-dest_files=["res://.godot/imported/asteroid_explosion_particles.png-398136eb15c418b62836df9c40fbd2df.ctex"]
+source_file="res://asteroid/assets/textures/asteroid_trail_particles.png"
+dest_files=["res://.godot/imported/asteroid_trail_particles.png-1f3c99493c0fa64ce1e2a29259ea64aa.ctex"]
 
 [params]
 

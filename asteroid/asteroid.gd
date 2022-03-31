@@ -5,6 +5,7 @@ extends RigidDynamicBody2D
 @export var debris_amount := 0
 @export var debris_scenes: Array[PackedScene]
 @export var debris_velosity_multiplier := 1.5
+@export var explosion_effect_scale := 1.0
 
 const angular_velocity_range := 1.0
 var explosion_effect_scene := preload("res://effects/asteroid_explosion/asteroid_explosion.tscn") as PackedScene
@@ -61,4 +62,5 @@ func _spawn_debris() -> void:
 func _spawn_explosion_effect() -> void:
 	var explosion_effect := explosion_effect_scene.instantiate() as Node2D
 	explosion_effect.position = position
+	explosion_effect.scale = Vector2.ONE * explosion_effect_scale
 	get_parent().add_child.call_deferred(explosion_effect)
