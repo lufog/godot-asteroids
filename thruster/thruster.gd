@@ -8,13 +8,8 @@ var active := false
 @onready var sfx := $SFX as AudioStreamPlayer2D
 
 
-func _ready() -> void:
-	visible = false
-
-
 func _process(_delta: float) -> void:
 	if active:
-		visible = true
 		animated_sprite.play("ignition")
 		if !sfx.playing:
 			sfx.play()
@@ -23,4 +18,3 @@ func _process(_delta: float) -> void:
 		@warning_ignore(redundant_await) # TODO: remove warning ignore after fix: https://github.com/godotengine/godot/issues/56265
 		await animated_sprite.animation_finished
 		sfx.stop()
-		visible = false
