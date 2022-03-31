@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3f3g3bc7j2m6"]
+[gd_scene load_steps=6 format=3 uid="uid://dmuegtdlcgimq"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_aj8ry"]
 [ext_resource type="Texture2D" uid="uid://w47rqm6kpq2e" path="res://player/assets/textures/spaceship.png" id="2_dl54q"]
 [ext_resource type="PackedScene" uid="uid://bv4pyu6dk3ol1" path="res://weapon/weapon.tscn" id="2_f8v5q"]
 [ext_resource type="PackedScene" uid="uid://desw0ate6ecgo" path="res://laser/laser_green.tscn" id="3_c27s2"]
-[ext_resource type="PackedScene" uid="uid://b715cnuex20xc" path="res://thruster/thruster.tscn" id="4_tj87x"]
+[ext_resource type="PackedScene" uid="uid://dl7eol5f6sytr" path="res://thruster/thruster.tscn" id="4_tj87x"]
 
 [node name="Player" type="RigidDynamicBody2D"]
 collision_mask = 6
@@ -28,8 +28,8 @@ polygon = PackedVector2Array(6, -28, 9, -9, 27, 2, 33, -3, 36, -4, 34, 18, 31, 1
 [node name="Thrusters" type="Node2D" parent="."]
 position = Vector2(0, 30)
 
-[node name="Left" parent="Thrusters" instance=ExtResource( "4_tj87x" )]
+[node name="ThrusterLeft" parent="Thrusters" instance=ExtResource( "4_tj87x" )]
 position = Vector2(-19, 0)
 
-[node name="Right" parent="Thrusters" instance=ExtResource( "4_tj87x" )]
+[node name="ThrusterRight" parent="Thrusters" instance=ExtResource( "4_tj87x" )]
 position = Vector2(19, 0)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csdey6lgpqiv5"
-path="res://.godot/imported/thruster_flame_1.png-4cb24c47270c77f11b8729e328fcee76.ctex"
+uid="uid://drfc3wo0hom2v"
+path="res://.godot/imported/thruster_flame_blue_1.png-ece9e600ec6cf51c3f5dbd226246db2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://thruster/assets/textures/thruster_flame_1.png"
-dest_files=["res://.godot/imported/thruster_flame_1.png-4cb24c47270c77f11b8729e328fcee76.ctex"]
+source_file="res://thruster/assets/textures/thruster_flame_blue_1.png"
+dest_files=["res://.godot/imported/thruster_flame_blue_1.png-ece9e600ec6cf51c3f5dbd226246db2a.ctex"]
 
 [params]
 

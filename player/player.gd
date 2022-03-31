@@ -20,8 +20,8 @@ var lives:
 			destroy()
 
 @onready var weapon := $Weapon as Weapon
-@onready var thruster_left  := $Thrusters/Left  as Thruster
-@onready var thruster_right := $Thrusters/Right as Thruster
+@onready var thruster_left  := $Thrusters/ThrusterLeft  as Thruster
+@onready var thruster_right := $Thrusters/ThrusterRight as Thruster
 
 
 func _ready() -> void:
