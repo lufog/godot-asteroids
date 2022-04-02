@@ -29,5 +29,5 @@ process_material = SubResource( "ParticlesMaterial_ol6wy" )
 [node name="Sprite" parent="." index="1"]
 texture = ExtResource( "2_hto0v" )
 
-[node name="CollisionPolygon" parent="." index="2"]
+[node name="Collision" parent="." index="2"]
 polygon = PackedVector2Array(8, -19, 21, -3, 7, 18, -8, 17, -21, 4, -15, -15)

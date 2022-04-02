@@ -14,5 +14,5 @@ debris_scenes = [ExtResource( "2_ra5ek" ), ExtResource( "3_yopu5" )]
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( "2_768gd" )
 
-[node name="CollisionPolygon" parent="." index="1"]
+[node name="Collision" parent="." index="1"]
 polygon = PackedVector2Array(39, -60, 84, -2, 58, 48, 17, 42, -36, 60, -84, 14, -56, -60)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Theme" path="res://ui/resources/themes/default.tres" id="1_b2twi"]
+[ext_resource type="Script" path="res://ui/pause_menu/pause_menu.gd" id="2_1s57a"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -300.0
+offset_right = 512.0
+offset_bottom = 300.0
+theme = ExtResource( "1_b2twi" )
+script = ExtResource( "2_1s57a" )
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -33.0
+offset_right = 35.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = false
+
+[node name="Resume" type="Button" parent="Buttons"]
+offset_right = 137.0
+offset_bottom = 49.0
+text = "Resume"
+
+[node name="Quit" type="Button" parent="Buttons"]
+offset_top = 53.0
+offset_right = 137.0
+offset_bottom = 102.0
+text = "Quit"
+
+[connection signal="pressed" from="Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]

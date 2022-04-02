@@ -1,16 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://7avvihldgiw2"]
+[gd_scene load_steps=7 format=3 uid="uid://7avvihldgiw2"]
 
+[ext_resource type="PackedScene" path="res://ui/pause_menu/pause_menu.tscn" id="1_0phq6"]
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background_black.png" id="1_wm7ti"]
 [ext_resource type="PackedScene" uid="uid://dmuegtdlcgimq" path="res://player/player.tscn" id="2_ltcjb"]
 [ext_resource type="PackedScene" uid="uid://dix63meuq4d5f" path="res://asteroid/asteroid_lg.tscn" id="4_keekd"]
-[ext_resource type="PackedScene" uid="uid://cuqmbisac84sm" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
+[ext_resource type="PackedScene" path="res://ui/hud/hud.tscn" id="4_ldk8l"]
 [ext_resource type="PackedScene" uid="uid://d262unqwn21ln" path="res://asteroid/asteroid_lg_2.tscn" id="5_t18nr"]
 
 [node name="Main" type="Node"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource( "4_ldk8l" )]
+[node name="HUD" parent="UI" instance=ExtResource( "4_ldk8l" )]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource( "1_0phq6" )]
+visible = false
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_repeat = 2
@@ -29,5 +33,5 @@ position = Vector2(224, 262)
 linear_velocity = Vector2(30, 30)
 
 [node name="Asteroid2" parent="Asteroids" instance=ExtResource( "5_t18nr" )]
-position = Vector2(772, 151)
+position = Vector2(790, 327)
 linear_velocity = Vector2(-30, -30)

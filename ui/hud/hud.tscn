@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuqmbisac84sm"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Theme" uid="uid://dipr2s0t3b57c" path="res://global/resources/themes/default.tres" id="1_rul6a"]
+[ext_resource type="Theme" path="res://ui/resources/themes/default.tres" id="1_rul6a"]
 [ext_resource type="Texture2D" uid="uid://b5j2l0mnxchxx" path="res://ui/hud/assets/textures/player_life.png" id="1_ygxrd"]
 [ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_yspea"]
 [ext_resource type="Texture2D" uid="uid://xd36lmbr8hk0" path="res://ui/hud/assets/textures/numeral_x.png" id="4_g1utf"]
@@ -8,6 +8,7 @@
 [node name="HUD" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 theme = ExtResource( "1_rul6a" )
 script = ExtResource( "1_yspea" )
 lives_nodepath = NodePath("Lives/Value")

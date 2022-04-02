@@ -39,5 +39,5 @@ texture = ExtResource( "2_cb6rt" )
 
 [node name="Sprite" type="Sprite2D" parent="."]
 
-[node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
+[node name="Collision" type="CollisionPolygon2D" parent="."]
 visible = false

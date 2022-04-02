@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontData"
 uid="uid://c3mopfjlt0g4b"
-path="res://.godot/imported/control_freak.ttf-edc00777a90aa9625bbb46676c5c9157.fontdata"
+path="res://.godot/imported/control_freak.ttf-f37258486725b9f6464afead9b7b4aaf.fontdata"
 
 [deps]
 
-source_file="res://global/assets/fonts/control_freak.ttf"
-dest_files=["res://.godot/imported/control_freak.ttf-edc00777a90aa9625bbb46676c5c9157.fontdata"]
+source_file="res://ui/fonts/control_freak.ttf"
+dest_files=["res://.godot/imported/control_freak.ttf-f37258486725b9f6464afead9b7b4aaf.fontdata"]
 
 [params]
 

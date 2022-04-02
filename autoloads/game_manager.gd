@@ -1,6 +1,8 @@
 extends Node
 
 
+@export var max_lives: int = 3
+
 const MAX_SCORE: int = 9_999_999_999
 
 var _score: int
@@ -10,8 +12,6 @@ var score:
 	set(value):
 		_score = clamp(value, 0, MAX_SCORE)
 		GameEvents.score_changed.emit(_score)
-
-var max_lives: int = 3
 
 var _player_lives
 var player_lives:

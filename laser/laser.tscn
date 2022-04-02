@@ -14,7 +14,7 @@ script = ExtResource( "1_33p1o" )
 [node name="Sprite" type="Sprite2D" parent="."]
 offset = Vector2(0, 6)
 
-[node name="CollisionShape" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource( "RectangleShape2D_fxsca" )
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
