@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdw1ep5y6mgf8"]
+[gd_scene load_steps=7 format=3 uid="uid://c6eluwefnm1ik"]
 
 [ext_resource type="PackedScene" path="res://ui/hud/hud.tscn" id="1_v1l1n"]
 [ext_resource type="PackedScene" uid="uid://d05bgfavvmxl5" path="res://ui/pause_menu/pause_menu.tscn" id="2_klx3l"]
-[ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://screen/assets/textures/background_black.png" id="3_hd128"]
+[ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://screens/assets/textures/background.png" id="3_hd128"]
 [ext_resource type="PackedScene" uid="uid://dmuegtdlcgimq" path="res://player/player.tscn" id="4_vc3mv"]
 [ext_resource type="PackedScene" uid="uid://dix63meuq4d5f" path="res://asteroid/asteroid_lg.tscn" id="5_545sc"]
 [ext_resource type="PackedScene" uid="uid://d262unqwn21ln" path="res://asteroid/asteroid_lg_2.tscn" id="6_653g0"]

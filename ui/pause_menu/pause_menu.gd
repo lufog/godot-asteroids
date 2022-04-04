@@ -19,7 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		paused = not paused
 
 
-func _on_to_title_pressed() -> void:
+func _exit_tree() -> void:
 	paused = false
 
 
