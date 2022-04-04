@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://d05bgfavvmxl5"]
 
-[ext_resource type="Theme" path="res://ui/resources/themes/default.tres" id="1_b2twi"]
+[ext_resource type="Theme" uid="uid://chgreb3um005t" path="res://ui/resources/themes/default.tres" id="1_b2twi"]
 [ext_resource type="Script" path="res://ui/pause_menu/pause_menu.gd" id="2_1s57a"]
+[ext_resource type="PackedScene" uid="uid://cvhtn5dx1qyv4" path="res://ui/button/button_change_scene.tscn" id="3_jk3iv"]
+[ext_resource type="PackedScene" path="res://ui/button/button_quit.tscn" id="3_pd6c7"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -21,10 +23,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -33.0
-offset_right = 35.0
-offset_bottom = 33.0
+offset_left = -68.5
+offset_top = -77.5
+offset_right = 68.5
+offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_layout_mode = 1
@@ -35,11 +37,17 @@ offset_right = 137.0
 offset_bottom = 49.0
 text = "Resume"
 
-[node name="Quit" type="Button" parent="Buttons"]
+[node name="ToTitle" parent="Buttons" instance=ExtResource( "3_jk3iv" )]
 offset_top = 53.0
 offset_right = 137.0
 offset_bottom = 102.0
-text = "Quit"
+text = "To Title"
+scene_path = "res://screen/title_screen/title_screen.tscn"
+
+[node name="Quit" parent="Buttons" instance=ExtResource( "3_pd6c7" )]
+offset_top = 106.0
+offset_right = 137.0
+offset_bottom = 155.0
 
 [connection signal="pressed" from="Buttons/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Buttons/ToTitle" to="." method="_on_to_title_pressed"]

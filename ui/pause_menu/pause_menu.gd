@@ -19,9 +19,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		paused = not paused
 
 
-func _on_resume_pressed() -> void:
+func _on_to_title_pressed() -> void:
 	paused = false
 
 
-func _on_quit_pressed() -> void:
-	tree.quit()
+func _on_resume_pressed() -> void:
+	paused = false

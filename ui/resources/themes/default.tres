@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=7 format=3]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://chgreb3um005t"]
 
-[ext_resource type="FontData" path="res://ui/fonts/control_freak.ttf" id="1_rdk68"]
+[ext_resource type="FontData" uid="uid://c3mopfjlt0g4b" path="res://ui/assets/fonts/control_freak.ttf" id="1_rdk68"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbjtj"]
 
