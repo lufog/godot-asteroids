@@ -5,13 +5,23 @@ extends RigidDynamicBody2D
 @export var debris_amount := 0
 @export var debris_scenes: Array[PackedScene]
 @export var debris_velosity_multiplier := 1.5
-@export var explosion_effect_scale := 1.0
+@export var effects_scale := 1.0
 
 const angular_velocity_range := 1.0
+var trail_effect_scene := preload("res://effects/asteroid_trail/asteroid_trail.tscn") as PackedScene
 var explosion_effect_scene := preload("res://effects/asteroid_explosion/asteroid_explosion.tscn") as PackedScene
+var trail_effect: AsteroidTrailEffect
 
 @onready var sprite := $Sprite as Sprite2D
 @onready var sprite_rect := sprite.get_rect()
+
+
+func _ready() -> void:
+	_spawn_trail_effect()
+
+
+func _process(delta: float) -> void:
+	trail_effect.position = position
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
@@ -24,6 +34,7 @@ func destroy() -> void:
 	
 	GameManager.score += score_poins
 	
+	trail_effect.free_with_delay()
 	queue_free()
 
 
@@ -59,8 +70,14 @@ func _spawn_debris() -> void:
 			_spawn_single_debris(new_direction)
 
 
+func _spawn_trail_effect() -> void:
+	trail_effect = trail_effect_scene.instantiate() as AsteroidTrailEffect
+	get_parent().add_child.call_deferred(trail_effect)
+	trail_effect.scale = Vector2.ONE * effects_scale
+
+
 func _spawn_explosion_effect() -> void:
 	var explosion_effect := explosion_effect_scene.instantiate() as Node2D
 	explosion_effect.position = position
-	explosion_effect.scale = Vector2.ONE * explosion_effect_scale
+	explosion_effect.scale = Vector2.ONE * effects_scale
 	get_parent().add_child.call_deferred(explosion_effect)

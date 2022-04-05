@@ -7,9 +7,10 @@
 mass = 25.0
 score_poins = 100
 explosion_effect_scale = 0.5
+effects_scale = 0.5
 
-[node name="Sprite" parent="." index="1"]
+[node name="Sprite" parent="." index="0"]
 texture = ExtResource( "2_hto0v" )
 
-[node name="Collision" parent="." index="2"]
+[node name="Collision" parent="." index="1"]
 polygon = PackedVector2Array(8, -19, 21, -3, 7, 18, -8, 17, -21, 4, -15, -15)

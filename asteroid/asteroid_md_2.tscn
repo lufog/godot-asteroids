@@ -11,9 +11,10 @@ score_poins = 50
 debris_amount = 2
 debris_scenes = [ExtResource( "2_8al5t" ), ExtResource( "3_7l7v8" )]
 explosion_effect_scale = 0.75
+effects_scale = 0.75
 
-[node name="Sprite" parent="." index="1"]
+[node name="Sprite" parent="." index="0"]
 texture = ExtResource( "2_dogf6" )
 
-[node name="Collision" parent="." index="2"]
+[node name="Collision" parent="." index="1"]
 polygon = PackedVector2Array(17, -46, 48, -12, 30, 41, -19, 46, -48, 11, -34, -33)
