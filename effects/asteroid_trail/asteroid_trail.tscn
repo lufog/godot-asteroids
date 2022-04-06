@@ -10,7 +10,7 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [sub_resource type="Gradient" id="Gradient_4fgy7"]
-colors = PackedColorArray(1, 1, 1, 1, 0.766667, 0.766667, 0.766667, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.720833, 0.720833, 0.720833, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_i2gnr"]
 gradient = SubResource( "Gradient_4fgy7" )

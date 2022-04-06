@@ -20,7 +20,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _exit_tree() -> void:
-	paused = false
+	tree.set_deferred("paused", false)
 
 
 func _on_resume_pressed() -> void:

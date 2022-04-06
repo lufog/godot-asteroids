@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvhtn5dx1qyv4"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://ui/button/button_change_scene.gd" id="1_m22sh"]
+[ext_resource type="Script" path="res://gui/buttons/change_scene_button.gd" id="1_m22sh"]
 
 [node name="ChangeSceneButton" type="Button"]
 offset_right = 8.0

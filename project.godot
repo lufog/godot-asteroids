@@ -57,7 +57,7 @@ GameManager="*res://autoloads/game_manager.gd"
 
 [display]
 
-mouse_cursor/custom_image="res://ui/assets/textures/cursor.png"
+mouse_cursor/custom_image="res://gui/assets/textures/cursor.png"
 window/stretch/mode="canvas_items"
 
 [input]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Theme" path="res://gui/resources/default_theme.tres" id="1_r1rsg"]
+[ext_resource type="PackedScene" path="res://gui/buttons/change_scene_button.tscn" id="1_rkabt"]
+
+[node name="SettingsScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( "1_r1rsg" )
+
+[node name="ChangeSceneButton" parent="." instance=ExtResource( "1_rkabt" )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -24.5
+offset_right = 47.0
+offset_bottom = 24.5
+text = "Back"
+scene_path = "res://screens/title_screen/title_screen.tscn"

@@ -20,7 +20,7 @@ func _ready() -> void:
 	_spawn_trail_effect()
 
 
-func _process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	trail_effect.position = position
 
 

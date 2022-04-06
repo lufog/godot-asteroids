@@ -1,25 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd3sj8i61iluu"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Theme" uid="uid://chgreb3um005t" path="res://ui/resources/themes/default.tres" id="1_5ngte"]
+[ext_resource type="Theme" path="res://gui/resources/default_theme.tres" id="1_5ngte"]
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://screens/assets/textures/background.png" id="2_5vaf3"]
-[ext_resource type="PackedScene" uid="uid://cvhtn5dx1qyv4" path="res://ui/button/button_change_scene.tscn" id="3_1olbo"]
+[ext_resource type="PackedScene" path="res://gui/buttons/change_scene_button.tscn" id="3_1olbo"]
 [ext_resource type="Texture2D" uid="uid://q1sty0ejslqn" path="res://screens/title_screen/assets/textures/title.png" id="3_egg4o"]
-[ext_resource type="PackedScene" path="res://ui/button/button_quit.tscn" id="4_7ipen"]
+[ext_resource type="PackedScene" path="res://gui/buttons/quit_button.tscn" id="4_7ipen"]
 
-[node name="TitleScreen" type="CanvasLayer"]
-
-[node name="Control" type="Control" parent="."]
+[node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( "1_5ngte" )
 
-[node name="Background" type="TextureRect" parent="Control"]
+[node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( "2_5vaf3" )
 stretch_mode = 1
 
-[node name="Title" type="TextureRect" parent="Control"]
+[node name="Title" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -332.0
@@ -31,7 +29,7 @@ texture = ExtResource( "3_egg4o" )
 metadata/_edit_layout_mode = 1
 metadata/_edit_use_custom_anchors = false
 
-[node name="Buttons" type="VBoxContainer" parent="Control"]
+[node name="Buttons" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -45,19 +43,20 @@ grow_vertical = 2
 metadata/_edit_layout_mode = 1
 metadata/_edit_use_custom_anchors = false
 
-[node name="NewGame" parent="Control/Buttons" instance=ExtResource( "3_1olbo" )]
+[node name="NewGame" parent="Buttons" instance=ExtResource( "3_1olbo" )]
 offset_right = 173.0
 offset_bottom = 49.0
 text = "New Game"
 scene_path = "res://screens/game_screen/game_screen.tscn"
 
-[node name="Settings" parent="Control/Buttons" instance=ExtResource( "3_1olbo" )]
+[node name="Settings" parent="Buttons" instance=ExtResource( "3_1olbo" )]
 offset_top = 53.0
 offset_right = 173.0
 offset_bottom = 102.0
 text = "Settings"
+scene_path = "res://screens/settings_screen/settings_screen.tscn"
 
-[node name="Quit" parent="Control/Buttons" instance=ExtResource( "4_7ipen" )]
+[node name="Quit" parent="Buttons" instance=ExtResource( "4_7ipen" )]
 offset_top = 106.0
 offset_right = 173.0
 offset_bottom = 155.0
