@@ -11,6 +11,8 @@ anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( "1_sts4r" )
 script = ExtResource( "1_yspea" )
+lives_nodepath = NodePath("Lives/Value")
+score_value_nodepath = NodePath("Score/Value")
 
 [node name="Lives" type="HBoxContainer" parent="."]
 offset_left = 20.0
