@@ -1,15 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://53ykblosoncj"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Theme" uid="uid://b33qrpn7pp62v" path="res://gui/theme.tres" id="1_0nhx8"]
+[ext_resource type="Theme" path="res://gui/theme.tres" id="1_fh1uc"]
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://screens/assets/textures/background.png" id="2_5vaf3"]
-[ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="3_1olbo"]
+[ext_resource type="PackedScene" path="res://gui/buttons/change_scene_button.tscn" id="3_1olbo"]
 [ext_resource type="Texture2D" uid="uid://q1sty0ejslqn" path="res://screens/title_screen/assets/textures/title.png" id="3_egg4o"]
-[ext_resource type="PackedScene" uid="uid://b2mhbiunf5eeu" path="res://gui/buttons/quit_button.tscn" id="4_7ipen"]
+[ext_resource type="PackedScene" path="res://gui/buttons/quit_button.tscn" id="4_7ipen"]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( "1_0nhx8" )
+theme = ExtResource( "1_fh1uc" )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0

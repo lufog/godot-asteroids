@@ -1,21 +1,103 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://qqike4xpa3n1"]
 
-[ext_resource type="Theme" path="res://gui/resources/default_theme.tres" id="1_r1rsg"]
-[ext_resource type="PackedScene" path="res://gui/buttons/change_scene_button.tscn" id="1_rkabt"]
+[ext_resource type="Theme" uid="uid://b33qrpn7pp62v" path="res://gui/theme.tres" id="1_7h36l"]
+[ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="1_rkabt"]
+[ext_resource type="Script" path="res://screens/settings_screen/settings_screen.gd" id="2_13ytw"]
 
 [node name="SettingsScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( "1_r1rsg" )
+theme = ExtResource( "1_7h36l" )
+script = ExtResource( "2_13ytw" )
+music_volume_slider_nodepach = NodePath("VBoxContainer/SettigsContainer/MusicSlider")
+sound_volume_slider_nodepach = NodePath("VBoxContainer/SettigsContainer/SoundSlider")
 
-[node name="ChangeSceneButton" parent="." instance=ExtResource( "1_rkabt" )]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -47.0
-offset_top = -24.5
-offset_right = 47.0
-offset_bottom = 24.5
+offset_left = -161.0
+offset_top = -116.5
+offset_right = 161.0
+offset_bottom = 116.5
+
+[node name="SettingsLabel" type="Label" parent="VBoxContainer"]
+offset_right = 322.0
+offset_bottom = 36.0
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettigsContainer" type="GridContainer" parent="VBoxContainer"]
+minimum_size = Vector2(200, 0)
+offset_top = 46.0
+offset_right = 322.0
+offset_bottom = 174.0
+columns = 2
+
+[node name="MasterLabel" type="Label" parent="VBoxContainer/SettigsContainer"]
+offset_right = 93.0
+offset_bottom = 36.0
+text = "Master:"
+
+[node name="MasterSlider" type="HSlider" parent="VBoxContainer/SettigsContainer"]
+offset_left = 103.0
+offset_right = 322.0
+offset_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+value = 100.0
+
+[node name="MusicLabel" type="Label" parent="VBoxContainer/SettigsContainer"]
+offset_top = 46.0
+offset_right = 93.0
+offset_bottom = 82.0
+text = "Music:"
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/SettigsContainer"]
+offset_left = 103.0
+offset_top = 46.0
+offset_right = 322.0
+offset_bottom = 82.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+value = 100.0
+
+[node name="SoundLabel" type="Label" parent="VBoxContainer/SettigsContainer"]
+offset_top = 92.0
+offset_right = 93.0
+offset_bottom = 128.0
+text = "Sound:"
+
+[node name="SoundSlider" type="HSlider" parent="VBoxContainer/SettigsContainer"]
+offset_left = 103.0
+offset_top = 92.0
+offset_right = 322.0
+offset_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+value = 100.0
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer"]
+offset_top = 184.0
+offset_right = 322.0
+offset_bottom = 233.0
+size_flags_vertical = 3
+theme_override_constants/separation = 96
+alignment = 1
+
+[node name="BackButton" parent="VBoxContainer/ButtonsContainer" instance=ExtResource( "1_rkabt" )]
+offset_right = 110.0
+offset_bottom = 49.0
 text = "Back"
 scene_path = "res://screens/title_screen/title_screen.tscn"
+
+[node name="ApplyButton" type="Button" parent="VBoxContainer/ButtonsContainer"]
+offset_left = 206.0
+offset_right = 322.0
+offset_bottom = 49.0
+text = "Apply"
+
+[connection signal="pressed" from="VBoxContainer/ButtonsContainer/ApplyButton" to="." method="_on_apply_button_pressed"]

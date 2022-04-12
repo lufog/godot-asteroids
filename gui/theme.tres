@@ -12,8 +12,8 @@ border_width_right = 2
 border_width_bottom = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wvhs"]
-content_margin_left = 16.0
-content_margin_right = 16.0
+content_margin_left = 24.0
+content_margin_right = 24.0
 content_margin_top = 8.0
 content_margin_bottom = 8.0
 bg_color = Color(0.67451, 0.223529, 0.223529, 1)
@@ -44,3 +44,7 @@ Button/styles/focus = SubResource( "StyleBoxEmpty_mbjtj" )
 Button/styles/hover = SubResource( "StyleBoxFlat_kq3j6" )
 Button/styles/normal = SubResource( "StyleBoxFlat_0wvhs" )
 Button/styles/pressed = SubResource( "StyleBoxFlat_ut0ym" )
+GridContainer/constants/hseparation = 10
+GridContainer/constants/vseparation = 10
+HBoxContainer/constants/separation = 10
+VBoxContainer/constants/separation = 10

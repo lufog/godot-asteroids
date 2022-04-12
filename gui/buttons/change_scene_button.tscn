@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://chc1hvodv8t7"]
 
+[ext_resource type="Theme" uid="uid://b33qrpn7pp62v" path="res://gui/theme.tres" id="1_a5hbu"]
 [ext_resource type="Script" path="res://gui/buttons/change_scene_button.gd" id="1_m22sh"]
 
 [node name="ChangeSceneButton" type="Button"]
 offset_right = 8.0
 offset_bottom = 31.0
+theme = ExtResource( "1_a5hbu" )
 text = "Change Scene"
 script = ExtResource( "1_m22sh" )
 scene_path = ""

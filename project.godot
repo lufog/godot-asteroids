@@ -51,9 +51,10 @@ config/features=PackedStringArray("4.0", "Vulkan Clustered")
 
 [autoload]
 
-GameEvents="*res://autoloads/game_events.gd"
-Helpers="*res://autoloads/helpers.gd"
-GameManager="*res://autoloads/game_manager.gd"
+Settings="*res://settings.gd"
+GameEvents="*res://game_events.gd"
+Helpers="*res://helpers.gd"
+GameManager="*res://game_manager.gd"
 
 [display]
 
