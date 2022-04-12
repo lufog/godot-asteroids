@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgpfhj62b0sr0"]
+[gd_scene load_steps=8 format=3 uid="uid://dgpfhj62b0sr0"]
 
 [ext_resource type="PackedScene" uid="uid://c31myqshaloea" path="res://gui/hud/hud.tscn" id="1_v1l1n"]
 [ext_resource type="PackedScene" uid="uid://dap0py7wi7oye" path="res://gui/pause_menu/pause_menu.tscn" id="2_klx3l"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmuegtdlcgimq" path="res://player/player.tscn" id="4_vc3mv"]
 [ext_resource type="PackedScene" uid="uid://dix63meuq4d5f" path="res://asteroid/asteroid_lg.tscn" id="5_545sc"]
 [ext_resource type="PackedScene" uid="uid://d262unqwn21ln" path="res://asteroid/asteroid_lg_2.tscn" id="6_653g0"]
+[ext_resource type="AudioStream" uid="uid://co0aegs33y82b" path="res://screens/game_screen/assets/music/music.ogg" id="7_ywdqy"]
 
 [node name="GameScreen" type="Node"]
 
@@ -30,8 +31,13 @@ position = Vector2(508, 338)
 
 [node name="Asteroid" parent="Asteroids" instance=ExtResource( "5_545sc" )]
 position = Vector2(224, 262)
-linear_velocity = Vector2(30, 30)
+linear_velocity = Vector2(40, 30)
 
 [node name="Asteroid2" parent="Asteroids" instance=ExtResource( "6_653g0" )]
 position = Vector2(790, 327)
-linear_velocity = Vector2(-30, -30)
+linear_velocity = Vector2(-30, -40)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( "7_ywdqy" )
+autoplay = true
+bus = &"Music"

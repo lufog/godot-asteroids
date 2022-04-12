@@ -49,12 +49,16 @@ run/main_scene="res://screens/title_screen/title_screen.tscn"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
 
+[audio]
+
+buses/default_bus_layout="res://global/bus_layout.tres"
+
 [autoload]
 
-Settings="*res://settings.gd"
-GameEvents="*res://game_events.gd"
-Helpers="*res://helpers.gd"
-GameManager="*res://game_manager.gd"
+Settings="*res://global/settings.gd"
+GameEvents="*res://global/game_events.gd"
+Helpers="*res://global/helpers.gd"
+GameManager="*res://global/game_manager.gd"
 
 [display]
 

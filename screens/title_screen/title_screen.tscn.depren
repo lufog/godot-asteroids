@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Theme" path="res://gui/theme.tres" id="1_fh1uc"]
+[ext_resource type="Theme" uid="uid://c5xx1vqjyf0ct" path="res://gui/theme.tres" id="1_reuhg"]
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://screens/assets/textures/background.png" id="2_5vaf3"]
-[ext_resource type="PackedScene" path="res://gui/buttons/change_scene_button.tscn" id="3_1olbo"]
-[ext_resource type="Texture2D" uid="uid://q1sty0ejslqn" path="res://screens/title_screen/assets/textures/title.png" id="3_egg4o"]
-[ext_resource type="PackedScene" path="res://gui/buttons/quit_button.tscn" id="4_7ipen"]
+[ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="3_1olbo"]
+[ext_resource type="Texture2D" uid="uid://bsn4maji3ujmw" path="res://screens/title_screen/assets/textures/title.png" id="3_egg4o"]
+[ext_resource type="PackedScene" uid="uid://b2mhbiunf5eeu" path="res://gui/buttons/quit_button.tscn" id="4_7ipen"]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( "1_fh1uc" )
+theme = ExtResource( "1_reuhg" )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -20,10 +20,10 @@ stretch_mode = 1
 [node name="Title" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -332.0
-offset_top = 60.0
-offset_right = 332.0
-offset_bottom = 164.0
+offset_left = -308.5
+offset_top = 65.0
+offset_right = 308.5
+offset_bottom = 169.0
 grow_horizontal = 2
 texture = ExtResource( "3_egg4o" )
 metadata/_edit_layout_mode = 1
@@ -35,9 +35,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -94.5
-offset_top = -73.5
+offset_top = -58.0
 offset_right = 94.5
-offset_bottom = 93.5
+offset_bottom = 109.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_layout_mode = 1

@@ -38,6 +38,7 @@ script = ExtResource( "6_ocd3s" )
 
 [node name="Particles" type="GPUParticles2D" parent="."]
 material = SubResource( "CanvasItemMaterial_36wqb" )
+emitting = false
 lifetime = 0.5
 one_shot = true
 explosiveness = 0.5
@@ -47,3 +48,4 @@ texture = ExtResource( "2_a4qm6" )
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( "3_65bv0" )
 autoplay = true
+bus = &"Sound"

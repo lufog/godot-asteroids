@@ -19,6 +19,7 @@ shape = SubResource( "RectangleShape2D_fxsca" )
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 autoplay = true
+bus = &"Sound"
 
 [node name="LifetimeTimer" type="Timer" parent="."]
 wait_time = 0.85

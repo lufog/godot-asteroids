@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gui/buttons/quit_button.gd" id="1_1xx0k"]
+[ext_resource type="Theme" uid="uid://c5xx1vqjyf0ct" path="res://gui/theme.tres" id="1_3gieb"]
+
+[node name="Quit" type="Button"]
+offset_right = 42.0
+offset_bottom = 31.0
+theme = ExtResource( "1_3gieb" )
+text = "Quit"
+script = ExtResource( "1_1xx0k" )
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

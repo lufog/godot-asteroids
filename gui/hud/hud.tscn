@@ -1,15 +1,62 @@
-[gd_scene load_steps=5 format=3 uid="uid://c31myqshaloea"]
+[gd_scene load_steps=11 format=3 uid="uid://c31myqshaloea"]
 
-[ext_resource type="Theme" uid="uid://b33qrpn7pp62v" path="res://gui/theme.tres" id="1_sts4r"]
+[ext_resource type="FontData" uid="uid://c3mopfjlt0g4b" path="res://gui/assets/fonts/control_freak.ttf" id="1_7pq8q"]
 [ext_resource type="Texture2D" uid="uid://b5j2l0mnxchxx" path="res://gui/hud/assets/textures/player_life.png" id="1_ygxrd"]
 [ext_resource type="Script" path="res://gui/hud/hud.gd" id="1_yspea"]
 [ext_resource type="Texture2D" uid="uid://xd36lmbr8hk0" path="res://gui/hud/assets/textures/numeral_x.png" id="4_g1utf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbjtj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq3j6"]
+bg_color = Color(0.847059, 0.278431, 0.278431, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wvhs"]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.67451, 0.223529, 0.223529, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.94902, 0.94902, 0.94902, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ut0ym"]
+bg_color = Color(0.501961, 0.168627, 0.168627, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Font" id="Font_4mdk5"]
+data/0 = ExtResource( "1_7pq8q" )
+
+[sub_resource type="Theme" id="Theme_4vkhr"]
+default_font = SubResource( "Font_4mdk5" )
+default_font_size = 32
+Button/styles/focus = SubResource( "StyleBoxEmpty_mbjtj" )
+Button/styles/hover = SubResource( "StyleBoxFlat_kq3j6" )
+Button/styles/normal = SubResource( "StyleBoxFlat_0wvhs" )
+Button/styles/pressed = SubResource( "StyleBoxFlat_ut0ym" )
+GridContainer/constants/hseparation = 10
+GridContainer/constants/vseparation = 10
+HBoxContainer/constants/separation = 10
+VBoxContainer/constants/separation = 10
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-theme = ExtResource( "1_sts4r" )
+theme = SubResource( "Theme_4vkhr" )
 script = ExtResource( "1_yspea" )
 lives_nodepath = NodePath("Lives/Value")
 score_value_nodepath = NodePath("Score/Value")

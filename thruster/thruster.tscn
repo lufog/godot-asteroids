@@ -9,14 +9,14 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i11b2"]
 animations = [{
-"frames": [ExtResource( "5_boy2g" ), ExtResource( "1_qink6" ), ExtResource( "2_wm3qi" ), ExtResource( "3_w3ve7" )],
-"loop": false,
-"name": &"extinction",
-"speed": 15.0
-}, {
 "frames": [ExtResource( "3_w3ve7" ), ExtResource( "2_wm3qi" ), ExtResource( "1_qink6" ), ExtResource( "5_boy2g" )],
 "loop": false,
 "name": &"ignition",
+"speed": 15.0
+}, {
+"frames": [ExtResource( "5_boy2g" ), ExtResource( "1_qink6" ), ExtResource( "2_wm3qi" ), ExtResource( "3_w3ve7" )],
+"loop": false,
+"name": &"extinction",
 "speed": 15.0
 }]
 
@@ -31,3 +31,4 @@ frame = 3
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( "5_lvliy" )
 volume_db = -16.0
+bus = &"Sound"
