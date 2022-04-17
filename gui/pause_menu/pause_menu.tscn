@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://dap0py7wi7oye"]
+[gd_scene load_steps=4 format=3 uid="uid://dap0py7wi7oye"]
 
-[ext_resource type="Theme" uid="uid://b33qrpn7pp62v" path="res://gui/theme.tres" id="1_8k34w"]
 [ext_resource type="Script" path="res://gui/pause_menu/pause_menu.gd" id="2_1s57a"]
 [ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="3_jk3iv"]
 [ext_resource type="PackedScene" uid="uid://b2mhbiunf5eeu" path="res://gui/buttons/quit_button.tscn" id="3_pd6c7"]
@@ -15,7 +14,6 @@ offset_left = -512.0
 offset_top = -300.0
 offset_right = 512.0
 offset_bottom = 300.0
-theme = ExtResource( "1_8k34w" )
 script = ExtResource( "2_1s57a" )
 
 [node name="Buttons" type="VBoxContainer" parent="."]

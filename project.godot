@@ -65,6 +65,10 @@ GameManager="*res://global/game_manager.gd"
 mouse_cursor/custom_image="res://gui/assets/textures/cursor.png"
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom="res://gui/theme.tres"
+
 [input]
 
 move_forward={

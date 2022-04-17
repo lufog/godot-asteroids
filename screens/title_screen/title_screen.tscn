@@ -1,62 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://53ykblosoncj"]
+[gd_scene load_steps=5 format=3 uid="uid://53ykblosoncj"]
 
-[ext_resource type="FontData" uid="uid://c3mopfjlt0g4b" path="res://gui/assets/fonts/control_freak.ttf" id="1_7sgkf"]
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://screens/assets/textures/background.png" id="2_5vaf3"]
 [ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="3_1olbo"]
 [ext_resource type="Texture2D" uid="uid://bsn4maji3ujmw" path="res://screens/title_screen/assets/textures/title.png" id="3_egg4o"]
 [ext_resource type="PackedScene" uid="uid://b2mhbiunf5eeu" path="res://gui/buttons/quit_button.tscn" id="4_7ipen"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbjtj"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq3j6"]
-bg_color = Color(0.847059, 0.278431, 0.278431, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wvhs"]
-content_margin_left = 24.0
-content_margin_right = 24.0
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-bg_color = Color(0.67451, 0.223529, 0.223529, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.94902, 0.94902, 0.94902, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ut0ym"]
-bg_color = Color(0.501961, 0.168627, 0.168627, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-
-[sub_resource type="Font" id="Font_4mdk5"]
-data/0 = ExtResource( "1_7sgkf" )
-
-[sub_resource type="Theme" id="Theme_4vkhr"]
-default_font = SubResource( "Font_4mdk5" )
-default_font_size = 32
-Button/styles/focus = SubResource( "StyleBoxEmpty_mbjtj" )
-Button/styles/hover = SubResource( "StyleBoxFlat_kq3j6" )
-Button/styles/normal = SubResource( "StyleBoxFlat_0wvhs" )
-Button/styles/pressed = SubResource( "StyleBoxFlat_ut0ym" )
-GridContainer/constants/hseparation = 10
-GridContainer/constants/vseparation = 10
-HBoxContainer/constants/separation = 10
-VBoxContainer/constants/separation = 10
-
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( "Theme_4vkhr" )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
