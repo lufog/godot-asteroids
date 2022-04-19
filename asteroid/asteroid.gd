@@ -1,6 +1,7 @@
 class_name Asteroid
 extends RigidDynamicBody2D
 
+
 @export var score_poins := 0
 @export var debris_amount := 0
 @export var debris_scenes: Array[PackedScene]
@@ -8,6 +9,7 @@ extends RigidDynamicBody2D
 @export var effects_scale := 1.0
 
 const angular_velocity_range := 1.0
+
 var trail_effect_scene := preload("res://effects/asteroid_trail/asteroid_trail.tscn") as PackedScene
 var explosion_effect_scene := preload("res://effects/asteroid_explosion/asteroid_explosion.tscn") as PackedScene
 var trail_effect: AsteroidTrailEffect

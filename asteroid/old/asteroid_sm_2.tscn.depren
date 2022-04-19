@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="uid://co2l7naxto5r8" path="res://asteroid/old/asteroid.tscn" id="1_00tbf"]
+[ext_resource type="Texture2D" path="res://asteroid/assets/textures/old/asteroid_sm_2.png" id="2_hto0v"]
+
+[node name="Asteroid" instance=ExtResource( "1_00tbf" )]
+mass = 25.0
+score_poins = 100
+explosion_effect_scale = 0.5
+effects_scale = 0.5
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( "2_hto0v" )
+
+[node name="Collision" parent="." index="1"]
+polygon = PackedVector2Array(8, -19, 21, -3, 7, 18, -8, 17, -21, 4, -15, -15)

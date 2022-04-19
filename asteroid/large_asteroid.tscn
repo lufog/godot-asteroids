@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b060cxu1fqjb7"]
+
+[ext_resource type="PackedScene" uid="uid://mud5oe4go2um" path="res://asteroid/base_asteroid.tscn" id="1_odpoh"]
+
+[node name="LargeAsteroid" instance=ExtResource( "1_odpoh" )]
+mass = 100.0
+score_poins = 25
+debris_amount = 2
