@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b060cxu1fqjb7"]
+[gd_scene load_steps=5 format=3 uid="uid://b060cxu1fqjb7"]
 
 [ext_resource type="PackedScene" uid="uid://mud5oe4go2um" path="res://asteroid/base_asteroid.tscn" id="1_odpoh"]
+[ext_resource type="PackedScene" uid="uid://njehehcf0oc6" path="res://asteroid/medium_asteroid.tscn" id="2_8u88m"]
+[ext_resource type="Texture2D" uid="uid://duwb370lfbg7x" path="res://asteroid/assets/textures/large_asteroid.png" id="2_ot0sn"]
+[ext_resource type="PackedScene" uid="uid://rrd6xohytm24" path="res://asteroid/medium_asteroid_2.tscn" id="3_optej"]
 
 [node name="LargeAsteroid" instance=ExtResource( "1_odpoh" )]
 mass = 100.0
 score_poins = 25
 debris_amount = 2
+debris_scenes = [ExtResource( "2_8u88m" ), ExtResource( "3_optej" )]
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( "2_ot0sn" )
+
+[node name="Collision" parent="." index="1"]
+polygon = PackedVector2Array(40, -53, 84, -2, 58, 42, 17, 38, -36, 53, -84, 13, -56, -53)
