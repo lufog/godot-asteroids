@@ -1,21 +1,16 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://jnn1nocr0v6u"]
 
-[ext_resource type="Theme" uid="uid://c5xx1vqjyf0ct" path="res://gui/theme.tres" id="1_reuhg"]
-[ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://screens/assets/textures/background.png" id="2_5vaf3"]
-[ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="3_1olbo"]
-[ext_resource type="Texture2D" uid="uid://bsn4maji3ujmw" path="res://screens/title_screen/assets/textures/title.png" id="3_egg4o"]
-[ext_resource type="PackedScene" uid="uid://b2mhbiunf5eeu" path="res://gui/buttons/quit_button.tscn" id="4_7ipen"]
+[ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="3_deewc"]
+[ext_resource type="PackedScene" uid="uid://b2mhbiunf5eeu" path="res://gui/buttons/quit_button.tscn" id="4_fyj1h"]
+[ext_resource type="AudioStream" uid="uid://bpd8j0g6hvnww" path="res://assets/music/menu.ogg" id="5_d7nq8"]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( "1_reuhg" )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( "2_5vaf3" )
-stretch_mode = 1
 
 [node name="Title" type="TextureRect" parent="."]
 anchor_left = 0.5
@@ -25,8 +20,6 @@ offset_top = 65.0
 offset_right = 308.5
 offset_bottom = 169.0
 grow_horizontal = 2
-texture = ExtResource( "3_egg4o" )
-metadata/_edit_layout_mode = 1
 metadata/_edit_use_custom_anchors = false
 
 [node name="Buttons" type="VBoxContainer" parent="."]
@@ -43,20 +36,24 @@ grow_vertical = 2
 metadata/_edit_layout_mode = 1
 metadata/_edit_use_custom_anchors = false
 
-[node name="NewGame" parent="Buttons" instance=ExtResource( "3_1olbo" )]
+[node name="NewGame" parent="Buttons" instance=ExtResource( "3_deewc" )]
 offset_right = 189.0
 offset_bottom = 49.0
 text = "New Game"
 scene_path = "res://screens/game_screen/game_screen.tscn"
 
-[node name="Settings" parent="Buttons" instance=ExtResource( "3_1olbo" )]
+[node name="Settings" parent="Buttons" instance=ExtResource( "3_deewc" )]
 offset_top = 59.0
 offset_right = 189.0
 offset_bottom = 108.0
 text = "Settings"
 scene_path = "res://screens/settings_screen/settings_screen.tscn"
 
-[node name="Quit" parent="Buttons" instance=ExtResource( "4_7ipen" )]
+[node name="Quit" parent="Buttons" instance=ExtResource( "4_fyj1h" )]
 offset_top = 118.0
 offset_right = 189.0
 offset_bottom = 167.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( "5_d7nq8" )
+autoplay = true

@@ -19,10 +19,20 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://effects/asteroid_trail/asteroid_trail.gd"
 }, {
+"base": "MarginContainer",
+"class": &"BaseScreen",
+"language": &"GDScript",
+"path": "res://screens/base_screen/base_screen.gd"
+}, {
 "base": "Area2D",
 "class": &"Laser",
 "language": &"GDScript",
 "path": "res://laser/laser.gd"
+}, {
+"base": "CanvasLayer",
+"class": &"Screens",
+"language": &"GDScript",
+"path": "res://main/screens.gd"
 }, {
 "base": "Node2D",
 "class": &"Thruster",
@@ -37,7 +47,9 @@ _global_script_classes=[{
 _global_script_class_icons={
 "Asteroid": "",
 "AsteroidTrailEffect": "",
+"BaseScreen": "",
 "Laser": "",
+"Screens": "",
 "Thruster": "",
 "Weapon": ""
 }
@@ -45,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Asteroids"
-run/main_scene="res://screens/title_screen/title_screen.tscn"
+run/main_scene="res://main/main.tscn"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
 

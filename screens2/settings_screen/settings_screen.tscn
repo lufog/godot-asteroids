@@ -1,13 +1,11 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://53me3rtdrl47"]
 
-[ext_resource type="Theme" uid="uid://c5xx1vqjyf0ct" path="res://gui/theme.tres" id="1_ea5lo"]
 [ext_resource type="PackedScene" uid="uid://chc1hvodv8t7" path="res://gui/buttons/change_scene_button.tscn" id="1_rkabt"]
 [ext_resource type="Script" path="res://screens/settings_screen/settings_screen.gd" id="2_13ytw"]
 
 [node name="SettingsScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( "1_ea5lo" )
 script = ExtResource( "2_13ytw" )
 master_volume_slider_nodepach = NodePath("VBoxContainer/SettigsContainer/MasterSlider")
 music_volume_slider_nodepach = NodePath("VBoxContainer/SettigsContainer/MusicSlider")

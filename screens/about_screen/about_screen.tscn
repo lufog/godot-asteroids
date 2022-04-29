@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://82mr3jhvvdol"]
+
+[ext_resource type="PackedScene" uid="uid://btvjiy030fgo6" path="res://screens/base_screen/base_screen.tscn" id="1_e6eux"]
+[ext_resource type="Script" path="res://screens/about_screen/about_screen.gd" id="2_8sgho"]
+
+[node name="AboutScreen" instance=ExtResource( "1_e6eux" )]
+script = ExtResource( "2_8sgho" )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
+offset_left = 80.0
+offset_top = 60.0
+offset_right = 944.0
+offset_bottom = 540.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ScreenLabel" type="Label" parent="VBoxContainer" index="0"]
+offset_right = 864.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 48
+text = "About"
+horizontal_alignment = 1
+
+[node name="AboutText" type="RichTextLabel" parent="VBoxContainer" index="1"]
+offset_top = 72.0
+offset_right = 864.0
+offset_bottom = 423.0
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center][b]Author:[/b] Aleksey Smirnov ([url=https://github.com/lufog]lufog[/url])
+[b]License:[/b] [url=https://github.com/lufog/godot-asteroids/blob/main/LICENSE]MIT[/url]
+[b]Source Code:[/b] [url=https://github.com/lufog/godot-asteroids]GitHub Repository[/url]
+
+[b]Godot License:[/b] [url=https://godotengine.org/license]MIT[/url][/center]"
+
+[node name="Buttons" type="HBoxContainer" parent="VBoxContainer" index="2"]
+offset_top = 443.0
+offset_right = 864.0
+offset_bottom = 480.0
+alignment = 1
+
+[node name="Back" type="Button" parent="VBoxContainer/Buttons" index="0"]
+offset_left = 390.0
+offset_right = 473.0
+offset_bottom = 37.0
+text = "Back"
+
+[connection signal="meta_clicked" from="VBoxContainer/AboutText" to="." method="_on_about_text_meta_clicked"]
+[connection signal="pressed" from="VBoxContainer/Buttons/Back" to="." method="_on_back_button_pressed"]

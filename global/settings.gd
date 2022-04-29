@@ -3,7 +3,7 @@ extends Node
 
 enum _BusIdx { MASTER = 0, MUSIC = 1, SOUND = 2 }
 
-const settings_file_path = "user://settings.dat"
+const SETTINGS_FILE_PATH = "user://settings.dat"
 
 var _master_volume: float
 var master_volume:
@@ -36,7 +36,7 @@ func _ready() -> void:
 
 func load_from_file() -> void:
 	var file := File.new()
-	if file.open(settings_file_path, File.READ) == OK:
+	if file.open(SETTINGS_FILE_PATH, File.READ) == OK:
 		# File opened, load data from file
 		master_volume = file.get_float()
 		music_volume = file.get_float()
@@ -51,7 +51,7 @@ func load_from_file() -> void:
 
 func save_to_file() -> void:
 	var file := File.new()
-	if file.open(settings_file_path, File.WRITE) == OK:
+	if file.open(SETTINGS_FILE_PATH, File.WRITE) == OK:
 		# File opened, save data to file
 		file.store_float(master_volume)
 		file.store_float(music_volume)
