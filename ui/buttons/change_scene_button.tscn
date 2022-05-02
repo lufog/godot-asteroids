@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/buttons/change_scene_button.gd" id="1_m22sh"]
+
+[node name="ChangeSceneButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 31.0
+text = "Change Scene"
+script = ExtResource( "1_m22sh" )
+scene_path = ""
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

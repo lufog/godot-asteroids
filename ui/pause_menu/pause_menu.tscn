@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://ui/pause_menu/pause_menu.gd" id="2_1s57a"]
+[ext_resource type="PackedScene" path="res://ui/buttons/change_scene_button.tscn" id="3_jk3iv"]
+[ext_resource type="PackedScene" path="res://ui/buttons/quit_button.tscn" id="3_pd6c7"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -300.0
+offset_right = 512.0
+offset_bottom = 300.0
+script = ExtResource( "2_1s57a" )
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.5
+offset_top = -77.5
+offset_right = 68.5
+offset_bottom = 77.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = false
+
+[node name="Resume" type="Button" parent="Buttons"]
+offset_right = 137.0
+offset_bottom = 37.0
+text = "Resume"
+
+[node name="ToTitle" parent="Buttons" instance=ExtResource( "3_jk3iv" )]
+offset_top = 41.0
+offset_right = 137.0
+offset_bottom = 78.0
+text = "To Title"
+scene_path = "res://main/main.tscn"
+
+[node name="Quit" parent="Buttons" instance=ExtResource( "3_pd6c7" )]
+offset_top = 82.0
+offset_right = 137.0
+offset_bottom = 119.0
+
+[connection signal="pressed" from="Buttons/Resume" to="." method="_on_resume_pressed"]

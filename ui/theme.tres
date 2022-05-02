@@ -1,0 +1,49 @@
+[gd_resource type="Theme" load_steps=7 format=3]
+
+[ext_resource type="FontData" path="res://ui/assets/fonts/control_freak.ttf" id="1_rdk68"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbjtj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq3j6"]
+bg_color = Color(0.847059, 0.278431, 0.278431, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wvhs"]
+content_margin_left = 18.0
+content_margin_top = 6.0
+content_margin_right = 18.0
+content_margin_bottom = 6.0
+bg_color = Color(0.67451, 0.223529, 0.223529, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.94902, 0.94902, 0.94902, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ut0ym"]
+bg_color = Color(0.501961, 0.168627, 0.168627, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Font" id="Font_4mdk5"]
+data/0 = ExtResource( "1_rdk68" )
+
+[resource]
+default_font = SubResource( "Font_4mdk5" )
+default_font_size = 32
+Button/font_sizes/font_size = 24
+Button/styles/focus = SubResource( "StyleBoxEmpty_mbjtj" )
+Button/styles/hover = SubResource( "StyleBoxFlat_kq3j6" )
+Button/styles/normal = SubResource( "StyleBoxFlat_0wvhs" )
+Button/styles/pressed = SubResource( "StyleBoxFlat_ut0ym" )
+GridContainer/constants/hseparation = 10
+GridContainer/constants/vseparation = 10

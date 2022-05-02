@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://co0aegs33y82b"
+path="res://.godot/imported/music.ogg-15ee7924aabcae96dcb23034c1af5456.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/assets/music/music.ogg"
+dest_files=["res://.godot/imported/music.ogg-15ee7924aabcae96dcb23034c1af5456.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0

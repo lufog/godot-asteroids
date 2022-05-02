@@ -22,7 +22,7 @@ _global_script_classes=[{
 "base": "MarginContainer",
 "class": &"BaseScreen",
 "language": &"GDScript",
-"path": "res://screens/base_screen/base_screen.gd"
+"path": "res://ui/screens/base_screen/base_screen.gd"
 }, {
 "base": "Area2D",
 "class": &"Laser",
@@ -74,12 +74,12 @@ GameManager="*res://global/game_manager.gd"
 
 [display]
 
-mouse_cursor/custom_image="res://gui/assets/textures/cursor.png"
+mouse_cursor/custom_image="res://ui/assets/textures/cursor.png"
 window/stretch/mode="canvas_items"
 
 [gui]
 
-theme/custom="res://gui/theme.tres"
+theme/custom="res://ui/theme.tres"
 
 [input]
 
