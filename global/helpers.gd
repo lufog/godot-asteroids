@@ -4,6 +4,10 @@ extends Node
 @onready var viewport_rect := get_viewport().get_visible_rect()
 
 
+func get_screen_center() -> Vector2:
+	return Vector2(viewport_rect.size.x / 2, viewport_rect.size.y / 2)
+
+
 func screen_wrap(position: Vector2, size: Vector2) -> Vector2:
 	var half_size = size / 2
 	position.x = wrapf(position.x, -half_size.x, viewport_rect.size.x + half_size.x)

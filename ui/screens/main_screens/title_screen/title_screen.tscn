@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmhp3hldxov8f"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="PackedScene" path="res://ui/screens/base_screen/base_screen.tscn" id="1_yr4bt"]
-[ext_resource type="Script" path="res://ui/screens/title_screen/title_screen.gd" id="2_8n27p"]
-[ext_resource type="Texture2D" uid="uid://bsn4maji3ujmw" path="res://ui/screens/title_screen/assets/textures/title.png" id="3_ml3dq"]
+[ext_resource type="Script" path="res://ui/screens/main_screens/title_screen/title_screen.gd" id="2_8n27p"]
+[ext_resource type="Texture2D" path="res://ui/screens/main_screens/title_screen/assets/textures/title.png" id="3_ml3dq"]
 [ext_resource type="PackedScene" path="res://ui/buttons/quit_button.tscn" id="4_1lyc4"]
 [ext_resource type="PackedScene" path="res://ui/buttons/change_scene_button.tscn" id="4_tldvg"]
 
@@ -32,32 +32,31 @@ size_flags_vertical = 3
 [node name="Buttons" type="VBoxContainer" parent="VBoxContainer/CenterContainer" index="0"]
 minimum_size = Vector2(160, 0)
 offset_left = 352.0
-offset_top = 106.0
+offset_top = 118.0
 offset_right = 512.0
-offset_bottom = 266.0
+offset_bottom = 254.0
 
 [node name="Start" parent="VBoxContainer/CenterContainer/Buttons" index="0" instance=ExtResource( "4_tldvg" )]
 offset_right = 160.0
-offset_bottom = 37.0
 text = "Start"
 scene_path = "res://game/game.tscn"
 
 [node name="Settings" type="Button" parent="VBoxContainer/CenterContainer/Buttons" index="1"]
-offset_top = 41.0
+offset_top = 35.0
 offset_right = 160.0
-offset_bottom = 78.0
+offset_bottom = 66.0
 text = "Settings"
 
 [node name="About" type="Button" parent="VBoxContainer/CenterContainer/Buttons" index="2"]
-offset_top = 82.0
+offset_top = 70.0
 offset_right = 160.0
-offset_bottom = 119.0
+offset_bottom = 101.0
 text = "About"
 
 [node name="Quit" parent="VBoxContainer/CenterContainer/Buttons" index="3" instance=ExtResource( "4_1lyc4" )]
-offset_top = 123.0
+offset_top = 105.0
 offset_right = 160.0
-offset_bottom = 160.0
+offset_bottom = 136.0
 
 [connection signal="pressed" from="VBoxContainer/CenterContainer/Buttons/Settings" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/Buttons/About" to="." method="_on_about_button_pressed"]

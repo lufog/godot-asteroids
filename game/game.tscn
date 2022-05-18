@@ -1,20 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdpdpabsio42i"]
+[gd_scene load_steps=10 format=3 uid="uid://d0n77ngwl4br6"]
 
-[ext_resource type="PackedScene" path="res://ui/hud/hud.tscn" id="1_v1l1n"]
-[ext_resource type="PackedScene" path="res://ui/pause_menu/pause_menu.tscn" id="2_klx3l"]
-[ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://ui/screens/assets/textures/background.png" id="3_hd128"]
-[ext_resource type="PackedScene" uid="uid://dmuegtdlcgimq" path="res://player/player.tscn" id="4_vc3mv"]
+[ext_resource type="Script" path="res://game/game.gd" id="1_3tyso"]
+[ext_resource type="PackedScene" uid="uid://dmuegtdlcgimq" path="res://player/player.tscn" id="2_pxy3s"]
+[ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background.png" id="3_hd128"]
+[ext_resource type="PackedScene" path="res://ui/screens/game_screens/hud_screen/hud_screen.tscn" id="5_e4p6w"]
 [ext_resource type="PackedScene" uid="uid://b060cxu1fqjb7" path="res://asteroid/large_asteroid.tscn" id="5_gyndi"]
+[ext_resource type="Script" path="res://game/screens.gd" id="5_icpd1"]
 [ext_resource type="PackedScene" uid="uid://cte5vcdl56kkh" path="res://asteroid/large_asteroid_2.tscn" id="6_u8d1m"]
+[ext_resource type="PackedScene" uid="uid://bxu676vgn6y54" path="res://ui/screens/game_screens/pause_screen/pause_screen.tscn" id="6_wqakb"]
 [ext_resource type="AudioStream" uid="uid://co0aegs33y82b" path="res://game/assets/music/music.ogg" id="7_ywdqy"]
 
 [node name="Game" type="Node"]
+script = ExtResource( "1_3tyso" )
+player_scene = ExtResource( "2_pxy3s" )
+asteroid_scenes = [ExtResource( "5_gyndi" ), ExtResource( "6_u8d1m" )]
 
-[node name="GUI" type="CanvasLayer" parent="."]
+[node name="Screens" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource( "5_icpd1" )
 
-[node name="HUD" parent="GUI" instance=ExtResource( "1_v1l1n" )]
+[node name="Hud" parent="Screens" instance=ExtResource( "5_e4p6w" )]
 
-[node name="PauseMenu" parent="GUI" instance=ExtResource( "2_klx3l" )]
+[node name="Pause" parent="Screens" instance=ExtResource( "6_wqakb" )]
 visible = false
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -23,9 +30,6 @@ texture = ExtResource( "3_hd128" )
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 600)
-
-[node name="Player" parent="." instance=ExtResource( "4_vc3mv" )]
-position = Vector2(508, 338)
 
 [node name="Asteroids" type="Node" parent="."]
 

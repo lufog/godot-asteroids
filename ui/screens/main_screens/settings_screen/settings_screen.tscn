@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" path="res://ui/screens/base_screen/base_screen.tscn" id="1_ghip8"]
-[ext_resource type="Script" path="res://ui/screens/settings_screen/settings_screen.gd" id="2_girla"]
+[ext_resource type="Script" path="res://ui/screens/main_screens/settings_screen/settings_screen.gd" id="2_girla"]
 
 [node name="SettingsScreen" instance=ExtResource( "1_ghip8" )]
 script = ExtResource( "2_girla" )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" path="res://ui/screens/base_screen/base_screen.tscn" id="1_e6eux"]
-[ext_resource type="Script" path="res://ui/screens/about_screen/about_screen.gd" id="2_8sgho"]
+[ext_resource type="Script" path="res://ui/screens/main_screens/about_screen/about_screen.gd" id="2_8sgho"]
 
 [node name="AboutScreen" instance=ExtResource( "1_e6eux" )]
 script = ExtResource( "2_8sgho" )

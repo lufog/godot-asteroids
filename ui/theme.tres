@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=7 format=3]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://brfqtqmosjhtd"]
 
-[ext_resource type="FontData" path="res://ui/assets/fonts/control_freak.ttf" id="1_rdk68"]
+[ext_resource type="FontData" uid="uid://c3mopfjlt0g4b" path="res://ui/assets/fonts/control_freak.ttf" id="1_rdk68"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbjtj"]
 
@@ -34,6 +34,9 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
+[sub_resource type="Font" id="Font_lwe8c"]
+data/0 = ExtResource( "1_rdk68" )
+
 [sub_resource type="Font" id="Font_4mdk5"]
 data/0 = ExtResource( "1_rdk68" )
 
@@ -47,3 +50,6 @@ Button/styles/normal = SubResource( "StyleBoxFlat_0wvhs" )
 Button/styles/pressed = SubResource( "StyleBoxFlat_ut0ym" )
 GridContainer/constants/hseparation = 10
 GridContainer/constants/vseparation = 10
+Label/colors/font_outline_color = Color(0.133333, 0.0901961, 0.145098, 1)
+Label/constants/outline_size = 8
+Label/fonts/font = SubResource( "Font_lwe8c" )

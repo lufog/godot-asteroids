@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxu676vgn6y54"]
+
+[ext_resource type="PackedScene" path="res://ui/screens/base_screen/base_screen.tscn" id="1_mhlpf"]
+[ext_resource type="PackedScene" path="res://ui/buttons/change_scene_button.tscn" id="2_dqnds"]
+[ext_resource type="Script" path="res://ui/screens/game_screens/pause_screen/pause_screen.gd" id="2_qtp41"]
+[ext_resource type="PackedScene" path="res://ui/buttons/quit_button.tscn" id="3_5gyi4"]
+
+[node name="PauseScreen" instance=ExtResource( "1_mhlpf" )]
+process_mode = 3
+script = ExtResource( "2_qtp41" )
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+offset_left = 80.0
+offset_top = 60.0
+offset_right = 944.0
+offset_bottom = 540.0
+
+[node name="Buttons" type="VBoxContainer" parent="CenterContainer" index="0"]
+offset_left = 375.0
+offset_top = 180.0
+offset_right = 489.0
+offset_bottom = 299.0
+
+[node name="Resume" type="Button" parent="CenterContainer/Buttons" index="0"]
+offset_right = 114.0
+offset_bottom = 37.0
+text = "Resume"
+
+[node name="ToTitle" parent="CenterContainer/Buttons" index="1" instance=ExtResource( "2_dqnds" )]
+offset_top = 41.0
+offset_right = 114.0
+offset_bottom = 78.0
+text = "To Title "
+scene_path = "res://main/main.tscn"
+
+[node name="Quit" parent="CenterContainer/Buttons" index="2" instance=ExtResource( "3_5gyi4" )]
+offset_top = 82.0
+offset_right = 114.0
+offset_bottom = 119.0
+
+[connection signal="pressed" from="CenterContainer/Buttons/Resume" to="." method="_on_resume_button_pressed"]

@@ -34,7 +34,7 @@ func destroy() -> void:
 	_spawn_debris()
 	_spawn_explosion_effect()
 	
-	GameManager.score += score_poins
+	GameEvents.score_points_added.emit(score_poins)
 	
 	trail_effect.free_with_delay()
 	queue_free()

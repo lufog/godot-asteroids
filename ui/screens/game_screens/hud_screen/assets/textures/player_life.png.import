@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5j2l0mnxchxx"
-path="res://.godot/imported/player_life.png-bfd9a554dc3f07a6edb1b796959e75f5.ctex"
+path="res://.godot/imported/player_life.png-e3492715df0d516b45cf035eaf8c3f44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/hud/assets/textures/player_life.png"
-dest_files=["res://.godot/imported/player_life.png-bfd9a554dc3f07a6edb1b796959e75f5.ctex"]
+source_file="res://ui/screens/game_screens/hud_screen/assets/textures/player_life.png"
+dest_files=["res://.godot/imported/player_life.png-e3492715df0d516b45cf035eaf8c3f44.ctex"]
 
 [params]
 
