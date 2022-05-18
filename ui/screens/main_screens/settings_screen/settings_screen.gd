@@ -13,7 +13,7 @@ func _ready() -> void:
 
 
 func _on_back_button_pressed() -> void:
-	change_screen_initiated.emit("TitleScreen")
+	change_screen_initiated.emit(UI.ScreenNames.TITLE)
 
 
 func _on_apply_button_pressed() -> void:

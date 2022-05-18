@@ -15,27 +15,27 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
 		if not tree.paused:
-			tree.paused = true
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			change_screen("PauseScreen")
-			
+			change_screen(UI.ScreenNames.PAUSE)
 		else:
-			tree.paused = false
-			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-			change_screen("HudScreen")
+			change_screen(UI.ScreenNames.HUD)
 
 
 func _exit_tree() -> void:
 	tree.set_deferred("paused", false)
 
 
-func change_screen(screen_name: String) -> void:
+func change_screen(screen_name: UI.ScreenNames) -> void:
 	hud_screen.visible = false
 	pause_screen.visible = false
 	
+	tree.paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 	match screen_name:
-		"HudScreen":
+		UI.ScreenNames.HUD:
 			hud_screen.visible = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 			
-		"PauseScreen":
+		UI.ScreenNames.PAUSE:
+			tree.paused = true
 			pause_screen.visible = true

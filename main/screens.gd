@@ -12,17 +12,17 @@ func _ready() -> void:
 	about_screen.change_screen_initiated.connect(change_screen)
 
 
-func change_screen(screen_name: String) -> void:
+func change_screen(screen_name: UI.ScreenNames) -> void:
 	title_screen.visible = false
 	settings_screen.visible = false
 	about_screen.visible = false
 	
 	match screen_name:
-		"TitleScreen":
+		UI.ScreenNames.TITLE:
 			title_screen.visible = true
 			
-		"SettingsScreen":
+		UI.ScreenNames.SETTINGS:
 			settings_screen.visible = true
 			
-		"AboutScreen":
+		UI.ScreenNames.ABOUT:
 			about_screen.visible = true
