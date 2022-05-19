@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://csom6yoyig7n6"
+path="res://.godot/imported/thruster.ogg-1d26f805f2338e96cd5ae1243458b275.oggvorbisstr"
+
+[deps]
+
+source_file="res://player/thruster/assets/sfx/thruster.ogg"
+dest_files=["res://.godot/imported/thruster.ogg-1d26f805f2338e96cd5ae1243458b275.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0

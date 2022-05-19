@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0n77ngwl4br6"]
+[gd_scene load_steps=11 format=3 uid="uid://d0n77ngwl4br6"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_3tyso"]
-[ext_resource type="PackedScene" uid="uid://dmuegtdlcgimq" path="res://player/player.tscn" id="2_pxy3s"]
+[ext_resource type="PackedScene" uid="uid://dy7y04bac63kh" path="res://player/player.tscn" id="2_pxy3s"]
 [ext_resource type="Texture2D" uid="uid://45hvacufff0q" path="res://main/assets/textures/background.png" id="3_hd128"]
 [ext_resource type="PackedScene" path="res://ui/screens/game_screens/hud_screen/hud_screen.tscn" id="5_e4p6w"]
 [ext_resource type="PackedScene" uid="uid://b060cxu1fqjb7" path="res://asteroid/large_asteroid.tscn" id="5_gyndi"]
@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://cte5vcdl56kkh" path="res://asteroid/large_asteroid_2.tscn" id="6_u8d1m"]
 [ext_resource type="PackedScene" uid="uid://bxu676vgn6y54" path="res://ui/screens/game_screens/pause_screen/pause_screen.tscn" id="6_wqakb"]
 [ext_resource type="AudioStream" uid="uid://co0aegs33y82b" path="res://game/assets/music/music.ogg" id="7_ywdqy"]
+[ext_resource type="Script" path="res://game/asteroid_spawner.gd" id="9_h8g6v"]
 
 [node name="Game" type="Node"]
 script = ExtResource( "1_3tyso" )
 player_scene = ExtResource( "2_pxy3s" )
-asteroid_scenes = [ExtResource( "5_gyndi" ), ExtResource( "6_u8d1m" )]
 
 [node name="Screens" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -31,17 +31,9 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 600)
 
-[node name="Asteroids" type="Node" parent="."]
-
-[node name="LargeAsteroid" parent="Asteroids" instance=ExtResource( "5_gyndi" )]
-position = Vector2(207, 389)
-linear_velocity = Vector2(40, 30)
-angular_velocity = 0.4
-
-[node name="LargeAsteroid2" parent="Asteroids" instance=ExtResource( "6_u8d1m" )]
-position = Vector2(794, 203)
-linear_velocity = Vector2(-30, -40)
-angular_velocity = -0.4
+[node name="AsteroidSpawner" type="Node" parent="."]
+script = ExtResource( "9_h8g6v" )
+asteroid_scenes = [ExtResource( "5_gyndi" ), ExtResource( "6_u8d1m" )]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( "7_ywdqy" )

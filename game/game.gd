@@ -1,9 +1,8 @@
 extends Node
 
 
-@export var player_scene: PackedScene
-@export var asteroid_scenes: Array[PackedScene]
 @export var max_lives: int = 3
+@export var player_scene: PackedScene
 
 const MAX_SCORE: int = 999_999_999
 const MAX_LEVEL: int = 999
@@ -32,6 +31,8 @@ var player_lives:
 		_player_lives = clamp(value, 0, max_lives)
 		GameEvents.player_lives_changed.emit(_player_lives)
 
+@onready var asteroid_spawner = $AsteroidSpawner as AsteroidSpawner
+
 
 func _ready() -> void:
 	GameEvents.score_points_added.connect(
@@ -43,6 +44,7 @@ func _ready() -> void:
 
 func new_game() -> void:
 	spawn_player()
+	asteroid_spawner.spawn_asteroids()
 	level = 1
 
 
