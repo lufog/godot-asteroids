@@ -9,6 +9,8 @@
 [node name="Player" type="RigidDynamicBody2D"]
 collision_mask = 6
 mass = 5.0
+contacts_reported = 1
+contact_monitor = true
 linear_damp = 1.0
 angular_damp = 1.0
 script = ExtResource( "1_aj8ry" )
@@ -21,7 +23,7 @@ _laser_scene = ExtResource( "3_c27s2" )
 scale = Vector2(0.75, 0.75)
 texture = ExtResource( "2_dl54q" )
 
-[node name="CollisionShape" type="CollisionPolygon2D" parent="."]
+[node name="Collision" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(6, -28, 9, -9, 27, 2, 33, -3, 36, -4, 34, 18, 31, 16, 10, 21, 5, 28, -5, 28, -10, 21, -31, 16, -34, 18, -36, -4, -33, -3, -27, 2, -9, -9, -6, -28)
 
@@ -33,3 +35,5 @@ position = Vector2(-20, 0)
 
 [node name="ThrusterRight" parent="Thrusters" instance=ExtResource( "5_p0482" )]
 position = Vector2(20, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

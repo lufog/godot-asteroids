@@ -30,11 +30,16 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	Helpers.screen_wrap_physics_body(state, sprite_rect.size)
 
 
+func _on_body_entered(body: Node) -> void:
+	if body.has_method("destroy"):
+		body.destroy()
+
+
 func destroy() -> void:
+	GameEvents.score_points_added.emit(score_poins)
+	
 	_spawn_debris()
 	_spawn_explosion_effect()
-	
-	GameEvents.score_points_added.emit(score_poins)
 	
 	trail_effect.free_with_delay()
 	queue_free()

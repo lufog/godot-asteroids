@@ -5,9 +5,13 @@
 [node name="BaseAsteroid" type="RigidDynamicBody2D"]
 collision_layer = 4
 collision_mask = 3
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( "1_sba75" )
 
 [node name="Sprite" type="Sprite2D" parent="."]
 
 [node name="Collision" type="CollisionPolygon2D" parent="."]
 visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -35,6 +35,9 @@ var player_lives:
 
 
 func _ready() -> void:
+	GameEvents.player_died.connect(
+		func() -> void: player_lives -= 1
+	)
 	GameEvents.score_points_added.connect(
 		func(v: int) -> void: score += v
 	)
@@ -43,6 +46,7 @@ func _ready() -> void:
 
 
 func new_game() -> void:
+	player_lives = max_lives
 	spawn_player()
 	asteroid_spawner.spawn_asteroids()
 	level = 1
@@ -51,7 +55,7 @@ func new_game() -> void:
 func spawn_player() -> void:
 	var player := player_scene.instantiate() as RigidDynamicBody2D
 	add_child(player)
-	player.position = Helpers.get_screen_center()
+	player.position = Helpers.get_screen_center() + Vector2(300, 0)
 
 
 func next_level() -> void:

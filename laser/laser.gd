@@ -19,14 +19,18 @@ func _on_lifetime_timer_timeout() -> void:
 	queue_free()
 
 
-func _on_laser_body_entered(body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("destroy"):
-		destroy()
 		body.destroy()
+		destroy()
 
 
 func destroy() -> void:
+	_spawn_collision_effect()
+	queue_free()
+
+
+func _spawn_collision_effect() -> void:
 	var collision_effect := collision_effect_scene.instantiate() as Node2D
 	collision_effect.position = position
 	get_parent().add_child(collision_effect)
-	queue_free()
