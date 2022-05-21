@@ -14,11 +14,6 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://asteroid/asteroid.gd"
 }, {
-"base": "Node",
-"class": &"AsteroidSpawner",
-"language": &"GDScript",
-"path": "res://game/asteroid_spawner.gd"
-}, {
 "base": "Node2D",
 "class": &"AsteroidTrailEffect",
 "language": &"GDScript",
@@ -56,7 +51,6 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "Asteroid": "",
-"AsteroidSpawner": "",
 "AsteroidTrailEffect": "",
 "BaseScreen": "",
 "Laser": "",

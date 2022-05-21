@@ -5,7 +5,7 @@ extends Node
 
 
 func get_screen_center() -> Vector2:
-	return Vector2(viewport_rect.size.x / 2, viewport_rect.size.y / 2)
+	return viewport_rect.size / 2
 
 
 func screen_wrap(position: Vector2, size: Vector2) -> Vector2:

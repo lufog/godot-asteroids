@@ -46,9 +46,10 @@ func _on_body_entered(body: Node) -> void:
 
 
 func destroy() -> void:
-	GameEvents.player_died.emit()
-	_spawn_explosion_effect()
-	queue_free()
+	if not is_queued_for_deletion():
+		GameEvents.player_died.emit()
+		_spawn_explosion_effect()
+		queue_free()
 
 
 func _spawn_explosion_effect() -> void:
