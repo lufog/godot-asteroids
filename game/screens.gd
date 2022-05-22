@@ -3,6 +3,7 @@ extends CanvasLayer
 
 @onready var hud_screen := $Hud as BaseScreen
 @onready var pause_screen := $Pause as BaseScreen
+@onready var game_over_screen := $GameOver as BaseScreen
 @onready var tree := get_tree()
 
 
@@ -25,17 +26,21 @@ func _exit_tree() -> void:
 
 
 func change_screen(screen_name: UI.ScreenNames) -> void:
-	hud_screen.visible = false
-	pause_screen.visible = false
+	hud_screen.hide()
+	pause_screen.hide()
+	game_over_screen.hide()
 	
 	tree.paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	match screen_name:
 		UI.ScreenNames.HUD:
-			hud_screen.visible = true
+			hud_screen.show()
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-			
+		
 		UI.ScreenNames.PAUSE:
 			tree.paused = true
-			pause_screen.visible = true
+			pause_screen.show()
+		
+		UI.ScreenNames.GAME_OVER:
+			game_over_screen.show()

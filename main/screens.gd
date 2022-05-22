@@ -13,16 +13,16 @@ func _ready() -> void:
 
 
 func change_screen(screen_name: UI.ScreenNames) -> void:
-	title_screen.visible = false
-	settings_screen.visible = false
-	about_screen.visible = false
+	title_screen.hide()
+	settings_screen.hide()
+	about_screen.hide()
 	
 	match screen_name:
 		UI.ScreenNames.TITLE:
-			title_screen.visible = true
+			title_screen.show()
 			
 		UI.ScreenNames.SETTINGS:
-			settings_screen.visible = true
+			settings_screen.show()
 			
 		UI.ScreenNames.ABOUT:
-			about_screen.visible = true
+			about_screen.show()

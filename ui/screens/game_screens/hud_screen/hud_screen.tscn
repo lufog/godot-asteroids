@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://bnolm55wuxv86"]
 
 [ext_resource type="PackedScene" path="res://ui/screens/base_screen/base_screen.tscn" id="1_l5yv2"]
 [ext_resource type="Script" path="res://ui/screens/game_screens/hud_screen/hud_screen.gd" id="2_li7x1"]
-[ext_resource type="Texture2D" path="res://ui/screens/game_screens/hud_screen/assets/textures/player_life.png" id="2_y65fi"]
-[ext_resource type="Texture2D" path="res://ui/screens/game_screens/hud_screen/assets/textures/numeral_x.png" id="3_uxost"]
+[ext_resource type="Texture2D" uid="uid://b5j2l0mnxchxx" path="res://ui/screens/game_screens/hud_screen/assets/textures/player_life.png" id="2_y65fi"]
+[ext_resource type="Texture2D" uid="uid://xd36lmbr8hk0" path="res://ui/screens/game_screens/hud_screen/assets/textures/numeral_x.png" id="3_uxost"]
 
 [node name="HudScreen" instance=ExtResource( "1_l5yv2" )]
 theme_override_constants/margin_left = 20

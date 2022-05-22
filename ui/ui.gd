@@ -7,5 +7,5 @@ enum ScreenNames {
 	TITLE, SETTINGS, ABOUT,
 	
 	# Game screens
-	HUD, PAUSE,
+	HUD, PAUSE, GAME_OVER
 }
