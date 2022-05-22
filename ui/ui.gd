@@ -4,7 +4,7 @@ class_name UI
 
 enum ScreenNames {
 	# Main screens
-	TITLE, SETTINGS, ABOUT,
+	MENU, SETTINGS, ABOUT,
 	
 	# Game screens
 	HUD, PAUSE, GAME_OVER

@@ -31,7 +31,7 @@ offset_top = 41.0
 offset_right = 114.0
 offset_bottom = 78.0
 text = "To Title "
-scene_path = "res://main/main.tscn"
+scene_path = "res://states/title/title.tscn"
 
 [node name="Quit" parent="CenterContainer/Buttons" index="2" instance=ExtResource( "3_5gyi4" )]
 offset_top = 82.0

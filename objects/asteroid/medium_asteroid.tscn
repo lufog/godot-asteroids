@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://objects/asteroid/base_asteroid.tscn" id="1_0ehxx"]
+[ext_resource type="PackedScene" path="res://objects/asteroid/small_asteroid.tscn" id="2_kxy8l"]
+[ext_resource type="Texture2D" path="res://objects/asteroid/assets/textures/medium_asteroid.png" id="2_o1lyj"]
+[ext_resource type="PackedScene" path="res://objects/asteroid/small_asteroid_2.tscn" id="3_0h7n6"]
+
+[node name="MediumAsteroid" instance=ExtResource( "1_0ehxx" )]
+mass = 50.0
+score_poins = 50
+debris_amount = 2
+debris_scenes = [ExtResource( "2_kxy8l" ), ExtResource( "3_0h7n6" )]
+effects_scale = 0.75
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( "2_o1lyj" )
+
+[node name="Collision" parent="." index="1"]
+polygon = PackedVector2Array(16, -42, 45, -11, 30, 38, -18, 42, -46, 9, -33, -30)

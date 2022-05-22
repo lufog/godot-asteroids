@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cb585edc1r1l4"]
+[gd_scene load_steps=7 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dcqkc7hhiybos" path="res://asteroid/assets/textures/asteroid_trail_particles.png" id="1_cawbt"]
+[ext_resource type="Texture2D" path="res://objects/asteroid/assets/textures/asteroid_trail_particles.png" id="1_cawbt"]
 [ext_resource type="Script" path="res://effects/asteroid_trail/asteroid_trail.gd" id="1_k8mai"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l1du0"]

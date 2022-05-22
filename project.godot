@@ -12,7 +12,7 @@ _global_script_classes=[{
 "base": "RigidDynamicBody2D",
 "class": &"Asteroid",
 "language": &"GDScript",
-"path": "res://asteroid/asteroid.gd"
+"path": "res://objects/asteroid/asteroid.gd"
 }, {
 "base": "Node2D",
 "class": &"AsteroidTrailEffect",
@@ -27,17 +27,17 @@ _global_script_classes=[{
 "base": "Area2D",
 "class": &"Laser",
 "language": &"GDScript",
-"path": "res://laser/laser.gd"
+"path": "res://objects/laser/laser.gd"
 }, {
 "base": "RigidDynamicBody2D",
 "class": &"Player",
 "language": &"GDScript",
-"path": "res://player/player.gd"
+"path": "res://objects/player/player.gd"
 }, {
 "base": "Node2D",
 "class": &"Thruster",
 "language": &"GDScript",
-"path": "res://player/thruster/thruster.gd"
+"path": "res://objects/player/thruster/thruster.gd"
 }, {
 "base": "Object",
 "class": &"UI",
@@ -47,7 +47,7 @@ _global_script_classes=[{
 "base": "Node2D",
 "class": &"Weapon",
 "language": &"GDScript",
-"path": "res://weapon/weapon.gd"
+"path": "res://objects/weapon/weapon.gd"
 }]
 _global_script_class_icons={
 "Asteroid": "",
@@ -63,19 +63,19 @@ _global_script_class_icons={
 [application]
 
 config/name="Asteroids"
-run/main_scene="res://main/main.tscn"
+run/main_scene="res://states/title/title.tscn"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
 
 [audio]
 
-buses/default_bus_layout="res://global/bus_layout.tres"
+buses/default_bus_layout="res://bus_layout.tres"
 
 [autoload]
 
-Settings="*res://global/settings.gd"
-GameEvents="*res://global/game_events.gd"
-Helpers="*res://global/helpers.gd"
+Settings="*res://autoloads/settings.gd"
+GameEvents="*res://autoloads/game_events.gd"
+Helpers="*res://autoloads/helpers.gd"
 
 [display]
 
