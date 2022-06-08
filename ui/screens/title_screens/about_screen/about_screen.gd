@@ -6,4 +6,4 @@ func _on_about_text_meta_clicked(meta: Variant) -> void:
 
 
 func _on_back_button_pressed() -> void:
-	change_screen_initiated.emit(UI.ScreenNames.TITLE)
+	change_screen_initiated.emit(UI.ScreenNames.MENU)

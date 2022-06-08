@@ -1,9 +1,9 @@
 extends BaseScreen
 
 
-@onready var master_volume_slider := $"%MasterSlider" as Slider
-@onready var music_volume_slider := $"%MusicSlider" as Slider
-@onready var sound_volume_slider := $"%SoundSlider" as Slider
+@onready var master_volume_slider := %MasterSlider as Slider
+@onready var music_volume_slider := %MusicSlider as Slider
+@onready var sound_volume_slider := %SoundSlider as Slider
 
 
 func _ready() -> void:
@@ -13,7 +13,7 @@ func _ready() -> void:
 
 
 func _on_back_button_pressed() -> void:
-	change_screen_initiated.emit(UI.ScreenNames.TITLE)
+	change_screen_initiated.emit(UI.ScreenNames.MENU)
 
 
 func _on_apply_button_pressed() -> void:
