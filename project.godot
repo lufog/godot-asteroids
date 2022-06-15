@@ -64,8 +64,8 @@ _global_script_class_icons={
 
 config/name="Asteroids"
 run/main_scene="res://states/title/title.tscn"
-config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
+config/icon="res://icon.png"
 
 [audio]
 
@@ -120,7 +120,6 @@ pause={
 
 [internationalization]
 
-locale/translations=PackedStringArray()
 _global_script_classes=[{
 "base": "RigidDynamicBody2D",
 "class": &"Asteroid",
