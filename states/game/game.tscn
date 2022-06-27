@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://8g6sghg6xme2"]
+[gd_scene load_steps=11 format=3 uid="uid://bk0c5l3vkf1l8"]
 
 [ext_resource type="Script" path="res://states/game/game.gd" id="1_3tyso"]
 [ext_resource type="PackedScene" uid="uid://qpdyric75glx" path="res://objects/player/player.tscn" id="2_pxy3s"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" path="res://objects/asteroid/large_asteroid_2.tscn" id="6_u8d1m"]
 [ext_resource type="PackedScene" uid="uid://bxu676vgn6y54" path="res://ui/screens/game_screens/pause_screen/pause_screen.tscn" id="6_wqakb"]
 [ext_resource type="PackedScene" uid="uid://biukvr084npeu" path="res://ui/screens/game_screens/game_over_screen/game_over_screen.tscn" id="8_1cfvv"]
-[ext_resource type="AudioStream" uid="uid://buisxx8dct67s" path="res://states/game/assets/music/game.ogg" id="10_r7jkp"]
+[ext_resource type="AudioStream" uid="uid://2h2vxa0ek5r7" path="res://states/game/assets/music/game.ogg" id="10_r7jkp"]
 
 [node name="Game" type="Node"]
 script = ExtResource( "1_3tyso" )

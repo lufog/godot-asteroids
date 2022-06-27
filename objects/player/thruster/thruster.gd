@@ -15,6 +15,5 @@ func _process(_delta: float) -> void:
 			sfx.play()
 	else:
 		animated_sprite.play("extinction")
-		@warning_ignore(redundant_await) # TODO: remove warning ignore after fix: https://github.com/godotengine/godot/issues/56265
 		await animated_sprite.animation_finished
 		sfx.stop()

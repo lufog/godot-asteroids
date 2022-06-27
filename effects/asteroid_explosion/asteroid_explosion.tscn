@@ -12,6 +12,7 @@ particles_anim_loop = false
 
 [sub_resource type="Curve" id="Curve_bqiyo"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_q8rl8"]
 curve = SubResource( "Curve_bqiyo" )
