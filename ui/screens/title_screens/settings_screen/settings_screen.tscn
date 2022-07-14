@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://kcp2164edr1t"]
 
 [ext_resource type="PackedScene" path="res://ui/screens/base_screen/base_screen.tscn" id="1_ghip8"]
 [ext_resource type="Script" path="res://ui/screens/title_screens/settings_screen/settings_screen.gd" id="2_girla"]
 
-[node name="SettingsScreen" instance=ExtResource( "1_ghip8" )]
-script = ExtResource( "2_girla" )
+[node name="SettingsScreen" instance=ExtResource("1_ghip8")]
+script = ExtResource("2_girla")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
 offset_left = 80.0
@@ -26,15 +26,15 @@ offset_bottom = 439.0
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer" index="0"]
-minimum_size = Vector2(420, 0)
-offset_left = 222.0
+custom_minimum_size = Vector2(300, 0)
+offset_left = 282.0
 offset_top = 95.0
-offset_right = 642.0
+offset_right = 582.0
 offset_bottom = 287.0
 theme_override_constants/separation = 20
 
 [node name="AudioSettingsLabel" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer" index="0"]
-offset_right = 420.0
+offset_right = 300.0
 offset_bottom = 44.0
 theme_override_font_sizes/font_size = 40
 text = "Audio"
@@ -43,10 +43,10 @@ vertical_alignment = 1
 
 [node name="AudioSettingsContainer" type="GridContainer" parent="VBoxContainer/CenterContainer/VBoxContainer" index="1"]
 offset_top = 64.0
-offset_right = 420.0
+offset_right = 300.0
 offset_bottom = 192.0
-theme_override_constants/v_separation = 10
 theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 10
 columns = 2
 
 [node name="MasterLabel" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer/AudioSettingsContainer" index="0"]
@@ -57,7 +57,7 @@ text = "Master:"
 [node name="MasterSlider" type="HSlider" parent="VBoxContainer/CenterContainer/VBoxContainer/AudioSettingsContainer" index="1"]
 unique_name_in_owner = true
 offset_left = 113.0
-offset_right = 420.0
+offset_right = 300.0
 offset_bottom = 16.0
 size_flags_horizontal = 3
 max_value = 1.0
@@ -74,7 +74,7 @@ text = "Sound:"
 unique_name_in_owner = true
 offset_left = 113.0
 offset_top = 46.0
-offset_right = 420.0
+offset_right = 300.0
 offset_bottom = 62.0
 size_flags_horizontal = 3
 max_value = 1.0
@@ -91,7 +91,7 @@ text = "Music:"
 unique_name_in_owner = true
 offset_left = 113.0
 offset_top = 92.0
-offset_right = 420.0
+offset_right = 300.0
 offset_bottom = 108.0
 size_flags_horizontal = 3
 max_value = 1.0

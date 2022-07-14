@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://v6x0lsfj70ej"]
+
+[ext_resource type="Script" path="res://game/objects/laser/collision_effect/laser_collision_effect.gd" id="1_mh2ub"]
+
+[node name="LaserCollisionEffect" type="Node2D"]
+script = ExtResource("1_mh2ub")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]

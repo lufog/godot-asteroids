@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://cg6ixhds5xnsa"
+path="res://.godot/imported/asteroid_explosion.ogg-ed5277f585d517d8e48783fc9141011d.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/objects/asteroid/effects/explosion/assets/sfx/asteroid_explosion.ogg"
+dest_files=["res://.godot/imported/asteroid_explosion.ogg-ed5277f585d517d8e48783fc9141011d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0

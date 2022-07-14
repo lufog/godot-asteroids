@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfmd71fd32mym"]
+
+[ext_resource type="PackedScene" path="res://game/objects/laser/collision_effect/laser_collision_effect.tscn" id="1_waven"]
+[ext_resource type="Texture2D" uid="uid://67ansoochphp" path="res://game/objects/laser/collision_effect/assets/textures/laser_collision_red_1.png" id="2_6p0tq"]
+[ext_resource type="Texture2D" uid="uid://ds20imbbg3p3v" path="res://game/objects/laser/collision_effect/assets/textures/laser_collision_red_2.png" id="3_awngx"]
+[ext_resource type="Texture2D" uid="uid://g4iegeqn5fyt" path="res://game/objects/laser/collision_effect/assets/textures/laser_collision_red_3.png" id="4_66rdh"]
+[ext_resource type="Texture2D" uid="uid://cobvyhfw8e54j" path="res://game/objects/laser/collision_effect/assets/textures/laser_collision_red_4.png" id="5_etpyq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfhb5"]
+animations = [{
+"frames": [ExtResource("2_6p0tq"), ExtResource("3_awngx"), ExtResource("4_66rdh"), ExtResource("5_etpyq")],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="LaserCollisionEffect" instance=ExtResource("1_waven")]
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource("SpriteFrames_gfhb5")

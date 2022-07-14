@@ -5,9 +5,9 @@
 [ext_resource type="Script" path="res://ui/screens/game_screens/pause_screen/pause_screen.gd" id="2_qtp41"]
 [ext_resource type="PackedScene" path="res://ui/buttons/quit_button.tscn" id="3_5gyi4"]
 
-[node name="PauseScreen" instance=ExtResource( "1_mhlpf" )]
+[node name="PauseScreen" instance=ExtResource("1_mhlpf")]
 process_mode = 3
-script = ExtResource( "2_qtp41" )
+script = ExtResource("2_qtp41")
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="0"]
 offset_left = 80.0
@@ -26,14 +26,14 @@ offset_right = 114.0
 offset_bottom = 37.0
 text = "Resume"
 
-[node name="ToTitle" parent="CenterContainer/Buttons" index="1" instance=ExtResource( "2_dqnds" )]
+[node name="ToTitle" parent="CenterContainer/Buttons" index="1" instance=ExtResource("2_dqnds")]
 offset_top = 41.0
 offset_right = 114.0
 offset_bottom = 78.0
 text = "To Title "
-scene_path = "res://states/title/title.tscn"
+scene_path = "res://title/title.tscn"
 
-[node name="Quit" parent="CenterContainer/Buttons" index="2" instance=ExtResource( "3_5gyi4" )]
+[node name="Quit" parent="CenterContainer/Buttons" index="2" instance=ExtResource("3_5gyi4")]
 offset_top = 82.0
 offset_right = 114.0
 offset_bottom = 119.0

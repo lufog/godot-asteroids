@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://game/objects/asteroid/medium_asteroid.tscn" id="1_bujqu"]
+[ext_resource type="Texture2D" path="res://game/objects/asteroid/assets/textures/medium_asteroid_2.png" id="2_rsa8p"]
+
+[node name="MediumAsteroid" instance=ExtResource( "1_bujqu" )]
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( "2_rsa8p" )
+
+[node name="Collision" parent="." index="1"]
+polygon = PackedVector2Array(27, -28, 42, 0, 20, 38, -27, 32, -39, 14, -42, -18, -10, -38)

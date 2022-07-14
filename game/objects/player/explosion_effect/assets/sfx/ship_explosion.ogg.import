@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://2dlqpbmicw32"
+path="res://.godot/imported/ship_explosion.ogg-c657c11a7ab3d807a91f3185261eb93a.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/objects/player/explosion_effect/assets/sfx/ship_explosion.ogg"
+dest_files=["res://.godot/imported/ship_explosion.ogg-c657c11a7ab3d807a91f3185261eb93a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0

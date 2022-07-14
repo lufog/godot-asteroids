@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://game/objects/asteroid/base_asteroid.tscn" id="1_7ukri"]
+[ext_resource type="Texture2D" path="res://game/objects/asteroid/assets/textures/small_asteroid.png" id="2_wgx06"]
+
+[node name="SmallAsteroid" instance=ExtResource( "1_7ukri" )]
+mass = 25.0
+score_poins = 100
+effects_scale = 0.5
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( "2_wgx06" )
+
+[node name="Collision" parent="." index="1"]
+polygon = PackedVector2Array(19, -20, 23, 9, 0, 23, -16, 17, -23, -4, -11, -23)

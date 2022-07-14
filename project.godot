@@ -12,12 +12,12 @@ _global_script_classes=[{
 "base": "RigidDynamicBody2D",
 "class": &"Asteroid",
 "language": &"GDScript",
-"path": "res://objects/asteroid/asteroid.gd"
+"path": "res://game/objects/asteroid/asteroid.gd"
 }, {
 "base": "Node2D",
 "class": &"AsteroidTrailEffect",
 "language": &"GDScript",
-"path": "res://effects/asteroid_trail/asteroid_trail.gd"
+"path": "res://game/objects/asteroid/effects/trail/asteroid_trail_effect.gd"
 }, {
 "base": "MarginContainer",
 "class": &"BaseScreen",
@@ -27,17 +27,17 @@ _global_script_classes=[{
 "base": "Area2D",
 "class": &"Laser",
 "language": &"GDScript",
-"path": "res://objects/laser/laser.gd"
+"path": "res://game/objects/laser/laser.gd"
 }, {
 "base": "RigidDynamicBody2D",
 "class": &"Player",
 "language": &"GDScript",
-"path": "res://objects/player/player.gd"
+"path": "res://game/objects/player/player.gd"
 }, {
 "base": "Node2D",
 "class": &"Thruster",
 "language": &"GDScript",
-"path": "res://objects/player/thruster/thruster.gd"
+"path": "res://game/objects/player/thruster/thruster.gd"
 }, {
 "base": "Object",
 "class": &"UI",
@@ -47,7 +47,7 @@ _global_script_classes=[{
 "base": "Node2D",
 "class": &"Weapon",
 "language": &"GDScript",
-"path": "res://objects/weapon/weapon.gd"
+"path": "res://game/objects/weapon/weapon.gd"
 }]
 _global_script_class_icons={
 "Asteroid": "",
@@ -63,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Asteroids_v1"
-run/main_scene="res://states/title/title.tscn"
+run/main_scene="res://title/title.tscn"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
 config/icon="res://icon.png"
 

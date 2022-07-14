@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://uk5861ylqrvu"
+path="res://.godot/imported/red_laser.ogg-db2b1170bda41b896e0b227d86b5a07a.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/objects/laser/assets/sfx/red_laser.ogg"
+dest_files=["res://.godot/imported/red_laser.ogg-db2b1170bda41b896e0b227d86b5a07a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0

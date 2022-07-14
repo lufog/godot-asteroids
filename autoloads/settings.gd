@@ -5,28 +5,25 @@ enum _BusIdx { MASTER = 0, MUSIC = 1, SOUND = 2 }
 
 const SETTINGS_FILE_PATH = "user://settings.dat"
 
-var _master_volume: float
-var master_volume:
+var master_volume: float:
 	get:
-		return _master_volume
+		return master_volume
 	set(value):
-		_master_volume = value
+		master_volume = value
 		AudioServer.set_bus_volume_db(_BusIdx.MASTER, linear2db(value))
 
-var _music_volume: float
-var music_volume:
+var music_volume: float:
 	get:
-		return _music_volume
+		return music_volume
 	set(value):
-		_music_volume = value
+		music_volume = value
 		AudioServer.set_bus_volume_db(_BusIdx.MUSIC, linear2db(value))
 
-var _sound_volume: float
-var sound_volume:
+var sound_volume: float:
 	get:
-		return _sound_volume
+		return sound_volume
 	set(value):
-		_sound_volume = value
+		sound_volume = value
 		AudioServer.set_bus_volume_db(_BusIdx.SOUND, linear2db(value))
 
 

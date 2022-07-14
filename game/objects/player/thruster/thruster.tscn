@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="res://game/objects/player/thruster/assets/textures/thruster_flame_blue_3.png" id="1_qink6"]
+[ext_resource type="Texture2D" path="res://game/objects/player/thruster/assets/textures/thruster_flame_blue_2.png" id="2_wm3qi"]
+[ext_resource type="Texture2D" path="res://game/objects/player/thruster/assets/textures/thruster_flame_blue_1.png" id="3_w3ve7"]
+[ext_resource type="Script" path="res://game/objects/player/thruster/thruster.gd" id="4_tjbah"]
+[ext_resource type="Texture2D" path="res://game/objects/player/thruster/assets/textures/thruster_flame_blue_4.png" id="5_boy2g"]
+[ext_resource type="AudioStream" path="res://game/objects/player/thruster/assets/sfx/thruster.ogg" id="5_lvliy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i11b2"]
+animations = [{
+"frames": [ExtResource( "3_w3ve7" ), ExtResource( "2_wm3qi" ), ExtResource( "1_qink6" ), ExtResource( "5_boy2g" )],
+"loop": false,
+"name": &"ignition",
+"speed": 15.0
+}, {
+"frames": [ExtResource( "5_boy2g" ), ExtResource( "1_qink6" ), ExtResource( "2_wm3qi" ), ExtResource( "3_w3ve7" )],
+"loop": false,
+"name": &"extinction",
+"speed": 15.0
+}]
+
+[node name="Thruster" type="Node2D"]
+script = ExtResource( "4_tjbah" )
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+frames = SubResource( "SpriteFrames_i11b2" )
+animation = &"extinction"
+frame = 3
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( "5_lvliy" )
+volume_db = -16.0
+bus = &"Sound"
